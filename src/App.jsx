@@ -1,12 +1,18 @@
 import React from 'react';
 import './App.scss'
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 
 const App = () => {
   return (
-    <div className='d-flex justify-center items-center min-h-screen'>
-      <h1>App</h1>
-    </div>
+    <>
+    <Navbar/>
+    <Routes>
+        {/* <Route path='' element={}/> */}
+    </Routes> 
+    </>
+   
   )
 }
 
