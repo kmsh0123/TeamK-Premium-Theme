@@ -8,9 +8,7 @@ const App = () => {
   return (
     <>
     <Navbar/>
-    <Routes>
-        {/* <Route path='' element={}/> */}
-    </Routes> 
+    
     </>
    
   )
