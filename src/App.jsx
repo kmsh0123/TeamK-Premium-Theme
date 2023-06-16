@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import About from "./pages/About";
+import Paths from "./routes/Paths";
 
 const App = () => {
 
@@ -12,9 +11,7 @@ const App = () => {
 
   return (
     <>
-      {/* <Navbar/> */}
-      <About />
-      <Routes>{/* <Route path='' element={}/> */}</Routes>
+      <Paths/>
     </>
   );
 };

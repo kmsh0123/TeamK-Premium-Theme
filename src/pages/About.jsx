@@ -106,7 +106,7 @@ const About = () => {
         </div>
       </section>
       {/* our story */}
-      <section className="tw-my-240">
+      <section className="tw-my-20">
         <div className="container">
           <div className="row tw-items-center">
             <div className="col-12 col-md-6 tw-mb-9">
