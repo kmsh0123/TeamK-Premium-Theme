@@ -10,6 +10,7 @@ const App = () => {
   return (
     <>
     <Navbar/>
+    <div className=' tw-h-[1000px]'></div>
     <Paths/>
     <Footer/>
     </>

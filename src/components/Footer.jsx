@@ -10,34 +10,34 @@ import { BsMedium } from "react-icons/bs";
 const Footer = () => {
   return (
     <div>
-      <footer className=" tw-bg-gradient-to-tl tw-from-[#2a2a2a] from-5% tw-via-[#1f1f1f] via-90% tw-to-[#2a2a2a] to-5%">
+      <footer className=" tw-mb-[-75px] tw-bg-center tw-bg-cover tw-bg-[url('https://yevgenysim-turkey.github.io/shopper/assets/img/patterns/pattern-2.svg')] tw-bg-opacity-100 tw-bg-[#1f1f1f]">
         <div className="tw-mx-auto tw-w-full tw-max-w-screen-xl tw-p-4 tw-py-6 lg:tw-py-8">
-          <div className=" tw-flex tw-flex-col tw-items-center tw-my-16 md:tw-my-14">
-            <h2 className=" tw-text-white tw-text-[25px] md:tw-text-2xl tw-font-medium">
+          <div className=" tw-flex tw-flex-col tw-items-center tw-my-16 md:tw-my-[60px]">
+            <h2 className=" md:tw-mb-[-22px] tw-text-white tw-text-[25px] md:tw-text-2xl tw-font-medium">
               Want style Ideas and Treats?
             </h2>
-            <div className=" tw-my-[24px]">
-              <div className=" tw-mt-3 tw-flex tw-justify-center tw-items-center tw-gap-[20px] md:tw-gap-[19px]">
+            <div className=" tw-mt-[24px] tw-mb-[22px]">
+              <div className=" tw-mt-[30px] tw-flex tw-justify-center tw-gap-[20px] md:tw-gap-[20px]">
                 <input
                   type="text"
                   id="default-input"
                   placeholder="Enter Email *"
-                  className="tw-bg-[#303030] tw-text-lg tw-text-white md:tw-text-base tw-block tw-w-[170px] md:tw-w-[388px] tw-px-[30px] focus:tw-ring-0 focus:tw-border-[#303030] tw-border-[#303030] tw-py-[20px] md:tw-py-[16px] tw-placeholder-gray-400"
+                  className="tw-bg-[#303030] tw-text-lg tw-text-white md:tw-text-base tw-block tw-w-[170px] md:tw-w-[380px] tw-px-[30px] focus:tw-ring-0 focus:tw-border-[#303030] tw-border-[#303030] tw-py-[20px] md:tw-py-[17px] tw-placeholder-gray-400"
                 />
-                <button className=" tw-relative tw-mt-[-1px] tw-bg-[#525252] hover:tw-bg-gray-700 tw-text-lg md:tw-text-base text-white tw-px-[40px] md:tw-px-[34px] tw-h-[69px] md:tw-h-[58px]">
+                <button className=" tw-relative tw-mt-[-1px] tw-bg-[#525252] hover:tw-bg-gray-700 tw-text-[16px] md:tw-font-[500] text-white tw-px-[40px] md:tw-px-[33px] tw-h-[69px] md:tw-h-[60px]">
                   Subscribe
                 </button>
               </div>
             </div>
           </div>
-          <div className=" md:tw-flex md:tw-justify-around">
-            <div className=" md:tw-mb-0">
+          <div className=" md:tw-mr-4 md:tw-mb-[-8px] md:tw-flex md:tw-justify-around">
+            <div className=" md:tw-mt-[-6px] md:tw-ml-[-8px]">
               <a href="#" className="tw-flex tw-items-center">
                 <span className="tw-self-center tw-text-[30px] md:tw-text-[28px] tw-font-medium tw-whitespace-nowrap tw-text-white">
                   Shopper.
                 </span>
               </a>
-              <div className=" tw-relative tw-flex tw-my-6 tw-space-x-2 md:tw-ml-[-6px] md:tw-justify-center md:tw-mt-[20px] tw-text-2xl md:tw-text-xl">
+              <div className=" tw-relative tw-flex tw-my-6 tw-space-x-[0.55rem] md:tw-ml-[-5px] md:tw-justify-center md:tw-mt-[20px] tw-text-2xl md:tw-text-xl">
                 <a href="#" className="tw-text-gray-400 hover:tw-text-gray-500">
                   <RiFacebookFill />
                   <span className=" tw-sr-only">Facebook page</span>
@@ -60,12 +60,12 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="tw-grid tw-grid-cols-2 tw-mt-10 md:tw-mt-0 tw-gap-8 md:tw-gap-4 lg:tw-gap-16 md:tw-grid-cols-4">
+            <div className=" tw-grid tw-grid-cols-2 tw-mt-10 md:tw-mt-[-2px] tw-gap-8 md:tw-gap-4 lg:tw-gap-[56px] md:tw-grid-cols-4">
               <div>
-                <h2 className="tw-mb-[18px] tw-text-[15px] md:tw-text-[12px] tw-font-medium tw-uppercase tw-text-white">
+                <h2 className="tw-mb-[16px] tw-text-[15px] md:tw-text-[13px] tw-font-[600] tw-uppercase tw-text-white">
                   Support
                 </h2>
-                <ul className="tw-text-gray-300 tw-text-[18px] md:tw-text-[16px]">
+                <ul className="tw-text-gray-300 tw-text-[18px] md:tw-text-base">
                   <li>
                     <a href="#" className=" tw-font-light hover:tw-text-gray-400">
                       Contact Us
@@ -89,7 +89,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="tw-mb-[18px] tw-text-[15px] md:tw-text-[12px] tw-font-medium tw-uppercase tw-text-white">
+                <h2 className="tw-mb-[16px] tw-text-[15px] md:tw-text-[13px] tw-font-medium tw-uppercase tw-text-white">
                   Shop
                 </h2>
                 <ul className="tw-text-gray-300 tw-text-[18px] md:tw-text-[16px]">
@@ -116,7 +116,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="tw-mb-[18px] tw-text-[15px] md:tw-text-[12px] tw-font-medium tw-uppercase tw-text-white">
+                <h2 className="tw-mb-[16px] tw-text-[15px] md:tw-text-[13px] tw-font-medium tw-uppercase tw-text-white">
                   Company
                 </h2>
                 <ul className="tw-text-gray-300 tw-text-[18px] md:tw-text-[16px]">
@@ -143,7 +143,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="tw-mb-[18px] tw-text-[15px] md:tw-text-[12px] tw-font-medium tw-uppercase tw-text-white">
+                <h2 className="tw-mb-[16px] tw-text-[15px] md:tw-text-[13px] tw-font-medium tw-uppercase tw-text-white">
                   Contact
                 </h2>
                 <ul className="tw-text-gray-300 tw-text-[18px] md:tw-text-[16px]">
@@ -167,16 +167,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=" tw-my-[100px] tw-relative tw-border-t-[1px] tw-border-gray-800 md:tw-my-[72px] tw-p-4 tw-py-[30px]">
-          <div className=" md:tw-mx-[106px] tw-relative md:tw-flex md:tw-items-center md:tw-justify-between">
-            <span className=" tw-relative tw-text-[14px] md:tw-text-[13px] md:tw-text-center tw-mt-[-16px] tw-text-gray-500">
+        <div className=" tw-my-[100px] tw-relative tw-border-t-[1px] tw-border-gray-700 md:tw-my-[72px] tw-p-4 tw-py-[24px]">
+          <div className=" md:tw-mx-[105px] tw-relative md:tw-flex md:tw-items-center md:tw-justify-between">
+            <span className=" tw-relative tw-text-[14px] md:tw-text-[13px] md:tw-text-center tw-mt-[-10px] tw-text-gray-500">
               © 2019
-              <a href="#" className=" tw-font-light hover:tw-text-gray-400">
+              <a href="#" className=" hover:tw-text-gray-400">
                 &nbsp;All rights reserved.
               </a>
               &nbsp;Designed by Unvab.
             </span>
-            <div className="tw-flex tw-mt-4 tw-space-x-2 md:tw-justify-center md:tw-mt-0 md:tw-mr-[-23px]">
+            <div className="tw-flex tw-mt-4 tw-space-x-[0.31rem] md:tw-justify-center md:tw-mt-0 md:tw-mr-[-1px]">
               <a href="#" className="tw-text-gray-400 hover:tw-text-gray-500">
                 <img
                   className=""
