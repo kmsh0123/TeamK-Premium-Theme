@@ -5,9 +5,7 @@ import Paths from "./routes/Paths";
 
 const App = () => {
 
-  const slides = {
-    
-  }
+
 
   return (
     <>
