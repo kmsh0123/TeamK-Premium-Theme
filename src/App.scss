@@ -3,4 +3,136 @@
 $font-family-sans-serif : "Jost"; 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@im
+
+
+
+.bg-img1{
+	background-image: url("https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-24.jpg");
+	background-size: cover;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+   }
+   .bg-img2{
+	   background-image: url("https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-16.jpg");
+	   background-size: cover;
+	   background-position: bottom left;
+	   background-repeat: no-repeat;
+	  }
+   .bg-img3{
+	   background-image: url("	https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-29.jpg");
+	   background-size: cover;
+	   background-position: bottom left;
+	   background-repeat: no-repeat;
+	  }
+	  .bg-img4{
+	   background-image: url("	https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-30.jpg");
+	   background-size: cover;
+	   background-position: bottom left;
+	   background-repeat: no-repeat;
+	  }
+   .card{
+	  
+	   position: relative;
+	   cursor: pointer;
+   }
+   .card:hover .card-img-front{
+	   visibility: visible;
+   }
+   
+   .card-badge-start {
+	   left: 0;
+   }
+   
+   .card-badge{
+   position: absolute;	
+   top: 1.25rem;
+   z-index: 1;
+   }
+ 
+  
+   
+   .card-img-hover .card-img-front{
+	   position: absolute;
+	   visibility: hidden;
+
+	   top:0;
+	   left: 0;
+   }
+
+ 
+   .btn-circle {
+	   align-items: center;
+	   border-radius: 50%;
+	   display: inline-flex;
+	   justify-content: center;
+	   padding: 0;
+	   width: calc(3.25rem + 2px);
+	   height: calc(3.25rem + 2px);
+   
+   }
+   
+   .btn-white{
+	   background-color: #fff;
+	   color: #1f1f1f;
+   }
+   .btn-circle:hover{
+   background-color: #ff6f61;
+   color: #fff;
+   }
+
+   .card-actions{
+	   position: relative;
+	   /* transition: all .1s ease-in-out; */
+   }
+   .card:hover .card-actions{
+	   transform: translateY(-5rem);
+	   transition: all .1s ease-in-out;
+   
+   }
+   
+   .eye{
+	   position: relative;
+	   right: 0;
+	   left: 0;
+	   top: 0;
+	   opacity: 0;
+	   margin-left: 5rem;
+	   opacity:0
+   
+   }
+   .card-img:hover .eye{
+	   opacity: 1;
+   } 
+   .card-img:hover .shop{
+	transition-delay: .3s;
+	   visibility: visible;
+   } 
+   .card-img:hover .heart{
+	   transition-delay: .2s;
+   
+	   opacity: 1;
+   }
+   .shop {
+	   margin-left: 5.5rem;
+	   /* transition: all .5s ease-in-out; */
+   /* transition-delay: .7s; */
+	   position: absolute;
+	   visibility: hidden;
+	   /* transition-delay: .15s; */
+   
+   } 
+   .heart {
+	   margin-left: 1rem;
+	   /* transition: all .5s ease-in-out; */
+	   /* transition-delay: .5s; */
+   
+	   opacity: 0;
+   
+	   /* transition-delay: .17s; */
+   
+   }
+   
+   
+   
 
