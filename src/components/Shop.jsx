@@ -11,9 +11,9 @@ import { BsFillCaretRightFill, BsCaretLeftFill } from "react-icons/bs";
 const Shop = () => {
   return (
     <div>
-      <div className=" fluid">
-        <div className=" tw-mx-16 row">
-          <div className=" col-3">
+      <div className=" container">
+        <div className="  row">
+          <div className="  col-lg-3 col-sm-12">
             <div
               className="accordion accordion-flush"
               id="accordionFlushExample"
@@ -21,7 +21,7 @@ const Shop = () => {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="flush-headingOne">
                   <button
-                    className="accordion-button collapsed tw-font-semibold tw-text-2xl tw-my-3"
+                    className="accordion-button collapsed tw-font-medium tw-text-lg tw-my-1"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne"
@@ -44,13 +44,16 @@ const Shop = () => {
                     <div className=" form-group">
                       <ul className=" list-group-flush mb-0" id="productsNav">
                         <li className=" list-group-item">
-                          <a className=" tw-text-lg tw-text-gray-800 tw-font-normal" href="#">
+                          <a
+                            className=" tw-text-xl tw-text-gray-700 tw-font-normal"
+                            href="#"
+                          >
                             All Products
                           </a>
                         </li>
                         <li className=" list-group-item tw-mt-4">
                           <a
-                            className=" tw-text-lg tw-text-gray-800 tw-font-normal collapsed"
+                            className=" tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#blousesCollapse"
                             aria-expanded="false"
@@ -69,10 +72,9 @@ const Shop = () => {
                                   className="form-check-input"
                                   id="blousesOne"
                                   type="checkbox"
-                                  
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesOne"
                                 >
                                   Women Tops, Tees &amp; Blouses
@@ -83,9 +85,10 @@ const Shop = () => {
                                   className="form-check-input"
                                   id="blousesTwo"
                                   type="checkbox"
+                                  checked
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesTwo"
                                 >
                                   Petite
@@ -98,7 +101,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesThree"
                                 >
                                   Petite-Size Blouses &amp; Button-Down Shirts
@@ -111,7 +114,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesFour"
                                 >
                                   Women Plus Tops &amp; Tees
@@ -122,7 +125,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="tw-text-lg tw-text-gray-800 tw-font-normal collapsed"
+                            className="tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#coatsCollapse"
                             aria-expanded="false"
@@ -143,7 +146,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="coatsOne"
                                 >
                                   Coats, Jackets &amp; Vests
@@ -156,7 +159,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="coatsTwo"
                                 >
                                   Down Jackets &amp; Parkas
@@ -169,7 +172,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="coatsThree"
                                 >
                                   Wool &amp; Pea Coats Plus-Size
@@ -180,7 +183,7 @@ const Shop = () => {
                         </li>
                         <li className=" list-group-item tw-mt-4">
                           <a
-                            className=" tw-text-lg tw-text-gray-800 tw-font-normal collapsed"
+                            className=" tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#dressesCollapse"
                             aria-expanded="false"
@@ -201,7 +204,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesOne"
                                 >
                                   A-line Dresses
@@ -214,7 +217,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesTwo"
                                 >
                                   Shift Dresses
@@ -227,7 +230,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesThree"
                                 >
                                   Wrap Dresses
@@ -240,7 +243,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesFour"
                                 >
                                   Maxi Dresses
@@ -251,7 +254,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="tw-text-lg tw-font-semibold"
+                            className="tw-text-xl tw-text-gray-700 tw-font-normal"
                             data-bs-toggle="collapse"
                             href="#hoodiesCollapse"
                             aria-expanded="true"
@@ -272,7 +275,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesOne"
                                 >
                                   Activewear
@@ -285,7 +288,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesTwo"
                                 >
                                   Fashion Hoodies &amp; Sweatshirts
@@ -298,7 +301,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesThree"
                                 >
                                   Big &amp; Tall Sweatshirts
@@ -311,7 +314,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesFour"
                                 >
                                   Big &amp; Tall Fashion Hoodies
@@ -322,7 +325,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-lg tw-font-semibold collapsed"
+                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#denimCollapse"
                             aria-expanded="false"
@@ -343,7 +346,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimOne"
                                 >
                                   Women Shorts
@@ -356,7 +359,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimTwo"
                                 >
                                   Juniors' Shorts
@@ -369,7 +372,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimThree"
                                 >
                                   Petite
@@ -382,7 +385,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimFour"
                                 >
                                   Women Plus Shorts
@@ -393,7 +396,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-lg tw-font-semibold collapsed"
+                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#jeansCollapse"
                             aria-expanded="false"
@@ -414,7 +417,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansOne"
                                 >
                                   Men Jeans
@@ -427,7 +430,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansTwo"
                                 >
                                   Men Big &amp; Tall Jeans
@@ -440,7 +443,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansThree"
                                 >
                                   Surf, Skate &amp; Street Clothing
@@ -453,7 +456,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansFour"
                                 >
                                   Men Big &amp; Tall Pants
@@ -464,7 +467,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-lg tw-font-medium collapsed"
+                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#jumpersCollapse"
                             aria-expanded="false"
@@ -485,7 +488,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersOne"
                                 >
                                   Sweaters Plus-Size
@@ -498,7 +501,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersTwo"
                                 >
                                   Plus Sweaters
@@ -511,7 +514,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersThree"
                                 >
                                   Petite Cardigans
@@ -524,7 +527,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersFour"
                                 >
                                   Tops, Tees &amp; Blouses
@@ -535,7 +538,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-lg tw-font-medium collapsed"
+                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#legginsCollapse"
                             aria-expanded="false"
@@ -556,7 +559,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsOne"
                                 >
                                   Novelty Leggings
@@ -569,7 +572,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsTwo"
                                 >
                                   Novelty Pants &amp; Capris
@@ -582,7 +585,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsThree"
                                 >
                                   Women Yoga Leggings
@@ -595,7 +598,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsFour"
                                 >
                                   Workout &amp; Training Leggings
@@ -612,7 +615,7 @@ const Shop = () => {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="flush-headingTwo">
                   <button
-                    className="accordion-button collapsed tw-font-semibold tw-text-2xl tw-my-3"
+                    className="accordion-button collapsed tw-font-medium tw-text-lg tw-my-1"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo"
@@ -659,7 +662,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="seasonOne"
                                     >
                                       Summer
@@ -672,7 +675,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="seasonTwo"
                                     >
                                       Winter
@@ -685,7 +688,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="seasonThree"
                                     >
                                       Spring &amp; Autumn
@@ -711,7 +714,7 @@ const Shop = () => {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="flush-headingThree">
                   <button
-                    className="accordion-button collapsed tw-font-semibold tw-text-2xl tw-my-3"
+                    className="accordion-button collapsed tw-font-medium tw-text-lg tw-my-1"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree"
@@ -721,203 +724,218 @@ const Shop = () => {
                     Size
                   </button>
                 </h2>
-                <div
-                  id="flush-collapseThree"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-headingThree"
-                  data-bs-parent="#accordionFlushExample"
+                {/* <div
+                  className="collapse show"
+                  id="sizeCollapse"
+                  data-simplebar-collapse="#sizeGroup"
+                  style=""
                 >
-                  <div className="accordion-body">
-                    <div
-                      className="collapse show"
-                      id="sizeCollapse"
-                      data-simplebar-collapse="#sizeGroup"
-                    >
-                      <div
-                        className="form-group form-group-overlow mb-6"
-                        id="sizeGroup"
-                        data-simplebar="init"
-                      >
-                        <div className="simplebar-wrapper">
-                          <div className="simplebar-height-auto-observer-wrapper">
-                            <div className="simplebar-height-auto-observer"></div>
-                          </div>
-                          <div className="simplebar-mask">
-                            <div className="simplebar-offset">
-                              <div
-                                className="simplebar-content-wrapper"
-                                tabIndex="0"
-                                role="region"
-                                aria-label="scrollable content"
-                              >
-                                <div className="simplebar-content">
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeOne"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeOne"
-                                    >
-                                      3XS
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeTwo"
-                                      type="checkbox"
-                                      disabled=""
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeTwo"
-                                    >
-                                      2XS
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeThree"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeThree"
-                                    >
-                                      XS
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeFour"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeFour"
-                                    >
-                                      S
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeFive"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeFive"
-                                    >
-                                      M
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeSix"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeSix"
-                                    >
-                                      L
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeSeven"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeSeven"
-                                    >
-                                      XL
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeEight"
-                                      type="checkbox"
-                                      disabled=""
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeEight"
-                                    >
-                                      2XL
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeNine"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeNine"
-                                    >
-                                      3XL
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeTen"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeTen"
-                                    >
-                                      4XL
-                                    </label>
-                                  </div>
-                                  <div className="form-check form-check-inline form-check-size mb-2">
-                                    <input
-                                      className="form-check-input"
-                                      id="sizeEleven"
-                                      type="checkbox"
-                                    />
-                                    <label
-                                      className="form-check-label"
-                                      htmlFor="sizeEleven"
-                                    >
-                                      One Size
-                                    </label>
-                                  </div>
-                                </div>
+                  <div
+                    className="form-group form-group-overlow mb-6"
+                    id="sizeGroup"
+                    data-simplebar="init"
+                  >
+                    <div className="simplebar-wrapper" style="margin: 0px;">
+                      <div className="simplebar-height-auto-observer-wrapper">
+                        <div className="simplebar-height-auto-observer"></div>
+                      </div>
+                      <div className="simplebar-mask">
+                        <div
+                          className="simplebar-offset"
+                          style="right: 0px; bottom: 0px;"
+                        >
+                          <div
+                            className="simplebar-content-wrapper"
+                            tabIndex="0"
+                            role="region"
+                            aria-label="scrollable content"
+                            style="height: auto; overflow: hidden;"
+                          >
+                            <div
+                              className="simplebar-content"
+                              style="padding: 0px;"
+                            >
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeOne"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeOne"
+                                >
+                                  3XS
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeTwo"
+                                  type="checkbox"
+                                  disabled=""
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeTwo"
+                                >
+                                  2XS
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeThree"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeThree"
+                                >
+                                  XS
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeFour"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeFour"
+                                >
+                                  S
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeFive"
+                                  type="checkbox"
+                                  checked=""
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeFive"
+                                >
+                                  M
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeSix"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeSix"
+                                >
+                                  L
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeSeven"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeSeven"
+                                >
+                                  XL
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeEight"
+                                  type="checkbox"
+                                  disabled=""
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeEight"
+                                >
+                                  2XL
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeNine"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeNine"
+                                >
+                                  3XL
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeTen"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeTen"
+                                >
+                                  4XL
+                                </label>
+                              </div>
+                              <div className="form-check form-check-inline form-check-size mb-2">
+                                <input
+                                  className="form-check-input"
+                                  id="sizeEleven"
+                                  type="checkbox"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="sizeEleven"
+                                >
+                                  One Size
+                                </label>
                               </div>
                             </div>
                           </div>
-                          <div className="simplebar-placeholder"></div>
-                        </div>
-                        <div className="simplebar-track simplebar-horizontal">
-                          <div className="simplebar-scrollbar"></div>
-                        </div>
-                        <div className="simplebar-track simplebar-vertical">
-                          <div className="simplebar-scrollbar"></div>
                         </div>
                       </div>
+                      <div
+                        className="simplebar-placeholder"
+                        style="width: auto; height: 99px;"
+                      ></div>
+                    </div>
+                    <div
+                      className="simplebar-track simplebar-horizontal"
+                      style="visibility: hidden;"
+                    >
+                      <div
+                        className="simplebar-scrollbar"
+                        style="width: 0px; display: none;"
+                      ></div>
+                    </div>
+                    <div
+                      className="simplebar-track simplebar-vertical"
+                      style="visibility: hidden;"
+                    >
+                      <div
+                        className="simplebar-scrollbar"
+                        style="height: 0px; display: none;"
+                      ></div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div className="accordion-item">
                 <h2 className="accordion-header" id="flush-headingFour">
                   <button
-                    className="accordion-button collapsed tw-font-semibold tw-text-2xl tw-my-3"
+                    className="accordion-button collapsed tw-font-medium tw-text-lg tw-my-1"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFour"
@@ -964,7 +982,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorOne"
                                     >
                                       Black
@@ -977,7 +995,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorTwo"
                                     >
                                       White
@@ -990,7 +1008,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorThree"
                                     >
                                       Blue
@@ -1003,7 +1021,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorFour"
                                     >
                                       Red
@@ -1017,7 +1035,7 @@ const Shop = () => {
                                       disabled=""
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorFive"
                                     >
                                       Brown
@@ -1030,7 +1048,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorSix"
                                     >
                                       Gray
@@ -1043,7 +1061,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorSeven"
                                     >
                                       Cyan
@@ -1056,7 +1074,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label text-body"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
                                       htmlFor="colorEight"
                                     >
                                       Pink
@@ -1083,7 +1101,7 @@ const Shop = () => {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="flush-headingFive">
                   <button
-                    className="accordion-button collapsed tw-font-semibold tw-text-2xl tw-my-3"
+                    className="accordion-button collapsed tw-font-medium tw-text-lg tw-my-1"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFive"
@@ -1126,7 +1144,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandOne"
                                     >
                                       Dsquared2
@@ -1140,7 +1158,7 @@ const Shop = () => {
                                       disabled=""
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandTwo"
                                     >
                                       Alexander McQueen
@@ -1153,7 +1171,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandThree"
                                     >
                                       Balenciaga
@@ -1166,7 +1184,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandFour"
                                     >
                                       Adidas
@@ -1179,7 +1197,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandFive"
                                     >
                                       Balmain
@@ -1192,7 +1210,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandSix"
                                     >
                                       Burberry
@@ -1205,7 +1223,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandSeven"
                                     >
                                       Chloé
@@ -1218,7 +1236,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandEight"
                                     >
                                       Kenzo
@@ -1231,7 +1249,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name"
+                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="brandNine"
                                     >
                                       Givenchy
@@ -1257,7 +1275,7 @@ const Shop = () => {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="flush-headingSix">
                   <button
-                    className="accordion-button collapsed tw-font-semibold tw-text-2xl tw-my-3"
+                    className="accordion-button collapsed tw-font-medium tw-text-lg tw-my-1"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseSix"
@@ -1302,10 +1320,9 @@ const Shop = () => {
                                       className="form-check-input"
                                       id="priceOne"
                                       type="checkbox"
-                                      
                                     />
                                     <label
-                                      className="form-check-label"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="priceOne"
                                     >
                                       $10.00 - $49.00
@@ -1316,10 +1333,9 @@ const Shop = () => {
                                       className="form-check-input"
                                       id="priceTwo"
                                       type="checkbox"
-                                      checked=""
                                     />
                                     <label
-                                      className="form-check-label"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="priceTwo"
                                     >
                                       $50.00 - $99.00
@@ -1332,7 +1348,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label"
+                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="priceThree"
                                     >
                                       $100.00 - $199.00
@@ -1345,7 +1361,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label"
+                                      className="form-check-labeltw-text-xl tw-text-gray-700 tw-font-normal"
                                       htmlFor="priceFour"
                                     >
                                       $200.00 and Up
@@ -1389,10 +1405,10 @@ const Shop = () => {
             </div>
           </div>
 
-          <div className=" col-9">
+          <div className=" col-lg-9 col-sm-12">
             <div className=" d-flex flex-column">
-              <div className=" ">
-                <div id="carouselExampleCaptions" className="carousel slide">
+              <div className="  ">
+                <div id="carouselExampleCaptions" className="carousel slide ">
                   <div className="carousel-indicators">
                     <button
                       type="button"
@@ -1415,31 +1431,28 @@ const Shop = () => {
                       aria-label="Slide 3"
                     ></button>
                   </div>
-                  <div className="carousel-inner">
-                   
+                  <div className="carousel-inner tw-min-h-fit">
                     <div className=" carousel-item active">
-                      <div className=" d-flex tw-h-[500px]">
+                      <div className=" d-flex">
                         <div className=" tw-w-[50%]">
-                          <div className="d-none d-md-block bg-img1 tw-h-[100%] ">
+                          <div className="d-none d-md-block bg-img1 tw-h-[400px] ">
                             <div className=" d-flex align-items-center tw-ms-20 tw-h-[100%]">
                               <div className=" py-4 px-2">
-                                <h4 className=" tw-text-4xl tw-font-medium">
+                                <h4 className=" tw-text-2xl tw-font-medium">
                                   2019 Summer
                                 </h4>
-                                <span className=" tw-text-4xl tw-font-medium">
+                                <span className=" tw-text-2xl tw-font-medium">
                                   Collection
                                 </span>
-                                <div className=" tw-mt-6 tw-font-medium tw-text-xl d-flex align-items-center ">
+                                <div className=" tw-mt-6 tw-font-medium tw-text-lg d-flex align-items-center ">
                                   <a className=" tw-me-4 " href="#">
                                     View Collection
                                   </a>
-                                  <div className=" tw-text-2xl tw-transition tw-delay-150 tw-duration-300 hover:tw-translate-x-2">
-                                  <i className=" ">
-                                    <BiRightArrowAlt />
-                                  </i>
+                                  <div className=" tw-text-xl tw-transition tw-delay-150 tw-duration-300 hover:tw-translate-x-2">
+                                    <i className=" ">
+                                      <BiRightArrowAlt />
+                                    </i>
                                   </div>
-
-                              
                                 </div>
                               </div>
                             </div>
@@ -1451,29 +1464,29 @@ const Shop = () => {
                     </div>
                     <div className="carousel-item">
                       <div className=" d-none d-md-block bg-img3">
-                        <div className=" d-flex justify-content-start align-items-center tw-h-[500px]">
+                        <div className=" d-flex justify-content-start align-items-center tw-h-[400px]">
                           <div className=" tw-ms-20 ">
-                            <div className=" tw-text-4xl tw-font-semibold tw-mb-7">
+                            <div className=" tw-text-3xl tw-font-medium tw-mb-7">
                               <h4 className="  ">Get -50% from</h4>
                               <span className="">Summer Collection</span>
                             </div>
 
-                            <p className=" tw-text-xl ">
+                            <p className=" tw-text-base tw-text-gray-600">
                               Appear, dry there darkness they're
                             </p>
-                            <span className=" tw-text-xl">seas.</span>
+                            <span className=" tw-text-base">seas.</span>
                             <br />
-                            <strong className=" tw-text-red-400 tw-text-xl">
+                            <strong className=" tw-text-red-500 tw-text-base tw-font-medium">
                               Use code 4GF5SD
                             </strong>
 
-                            <div className=" tw-mt-7">
+                            <div className=" tw-mt-7 ">
                               <a
-                                className=" d-flex align-items-center hover:tw-bg-gray-900 tw-transition tw-delay-75 hover:tw-text-yellow-50 tw-px-2 tw-py-4 tw-outline   "
-                                href="shop.html"
+                                className=" d-flex align-items-center tw-justify-around tw-p-3 tw-text-lg tw-font-medium tw-transition tw-delay-75 tw-w-40 tw-outline tw-outline-gray-400 hover:tw-bg-gray-900 hover:tw-text-yellow-50"
+                                href=""
                               >
-                                Shop Now<BiRightArrowAlt className=" tw-text-2x tw-ms-4 tw-transition tw-delay-150 tw-duration-300 hover:tw-translate-x-2" />
-                                
+                                Shop Now
+                                <BiRightArrowAlt className=" tw-text-xl tw-ms-4 tw-transition tw-delay-150 tw-duration-300 hover:tw-translate-x-2" />
                               </a>
                             </div>
                           </div>
@@ -1481,19 +1494,19 @@ const Shop = () => {
                       </div>
                     </div>
                     <div className="carousel-item">
-                      <div className=" d-flex justify-content-center align-items-center tw-h-[500px] bg-img4">
+                      <div className=" d-flex justify-content-center align-items-center tw-h-[400px] bg-img4">
                         <div className="">
                           <div className="card-body tw-px-md-10 tw-py-11 text-center text-white">
-                            <p className="tw-text-uppercase tw-text-lg tw-font-medium tw-mb-4">
+                            <p className=" tw-uppercase tw-text-base tw-mb-7">
                               Enjoy an extra
                             </p>
 
-                            <h1 className=" tw-text-uppercase tw-text-7xl tw-font-semibold tw-mb-3">
+                            <h1 className=" tw-uppercase tw-text-6xl tw-tracking-wide tw-font-semibold tw-mb-5">
                               50% off
                             </h1>
 
                             <a
-                              className="link-underline text-reset tw-font-semibold tw-text-lg"
+                              className=" tw-font-medium tw-text-base tw-underline-offset-8 tw-no-underline hover:tw-underline tw-decoration-white tw-decoration-2"
                               href="shop.html"
                             >
                               Shop Collection
@@ -1529,648 +1542,679 @@ const Shop = () => {
                   </button>
                 </div>
               </div>
-              <div className=" ">
-                <div className=" tw-mt-20  d-flex justify-content-between align-item center">
-                  <div className="">
-                    <h1 className=" tw-text-3xl">Womens' Clothing</h1>
-                    <p className=" tw-text-gray-800 ">Home</p>
-                    <span className=" tw-text-gray-800">Womens' Clothing</span>
-                  </div>
-                  <div className="">
-                    <a className=" btn btn-outline-dark btn-lg">Most Popular</a>
-                  </div>
-                </div>
-                <div className="row tw-mb-7">
-                  <div className=" tw-flex tw-flex-wrap">
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light tw-me-4">
-                      <h2 className=" tw-me-3">Shift dresses</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
 
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light tw-me-4">
-                      <h2 className=" tw-me-3">Summer</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light tw-me-4">
-                      <h2 className=" tw-me-3">M</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light tw-me-4">
-                      <h2 className=" tw-me-3">White</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light tw-me-4">
-                      <h2 className=" tw-me-3">Dress</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light tw-me-4">
-                      <h2 className=" tw-me-3">Adidas</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light tw-me-4">
-                      <h2 className=" tw-me-3">$10.00 - $49.00</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
-                    <div className=" d-flex justify-content-center align-items-center tw-p-4 bg-light">
-                      <h2 className=" tw-me-3">$50.00 - $99.00</h2>
-                      <span className="">
-                        <BsXLg className="" />
-                      </span>
-                    </div>
+              <div className=" tw-mt-16 tw-mb-6 d-flex justify-content-between align-item center">
+                <div className="">
+                  <h1 className=" tw-text-3xl tw-font-medium tw-mb-3">
+                    Womens' Clothing
+                  </h1>
+                  <div className=" ">
+                    {/* <p className=" tw-text-gray-600 tw-text-lg">Home</p>
+                    <span className=" tw-text-gray-600 tw-text-lg">Womens' Clothing</span> */}
+
+                    <nav className="" aria-label="breadcrumb">
+                      <ol className="breadcrumb">
+                        <li className="breadcrumb-item tw-text-gray-500 tw-text-sm">
+                          <a href="#">Home</a>
+                        </li>
+                        <li
+                          className="breadcrumb-item active tw-text-gray-500 tw-text-sm"
+                          aria-current="page"
+                        >
+                          Womens' Clothing
+                        </li>
+                      </ol>
+                    </nav>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-6 col-md-4">
-                    <div className=" card tw-mb-7">
-                      <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
-                        New
-                      </div>
-
-                      <div className=" card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-5.jpg"
-                            alt="..."
-                          />
-                          <img
-                            className="card-img-top card-img-front"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-120.jpg"
-                            alt="..."
-                          />
-                        </a>
-
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="card-body px-0">
-                        <div className="fs-xs card-title">
-                          <a className="text-muted" href="">
-                            Shoes
-                          </a>
-                        </div>
-
-                        <div className="fw-bold">
-                          <a className="text-body" href="product.html">
-                            Leather mid-heel Sandals
-                          </a>
-                        </div>
-
-                        <div className="fw-bold text-muted">$129.00</div>
-                      </div>
-                    </div>
+                <div className="">
+                  <a className=" btn btn-outline-dark btn-lg">Most Popular</a>
+                </div>
+              </div>
+              <div className="row tw-mb-12">
+                <div className=" tw-flex tw-flex-wrap">
+                  <div className=" d-flex justify-content-center align-items-center tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      Shift dresses
+                    </h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
                   </div>
 
-                  <div className="col-6 col-md-4">
-                    <div className="card tw-mb-7">
-                      <div className="badge bg-white text-body card-badge card-badge-start tw-text-uppercase">
-                        New
-                      </div>
+                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      Summer
+                    </h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
+                  </div>
+                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">M</h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
+                  </div>
+                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      White
+                    </h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
+                  </div>
+                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      Dress
+                    </h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
+                  </div>
+                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      Adidas
+                    </h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
+                  </div>
+                </div>
+                <div className="d-flex tw-mt-4">
+                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      $10.00 - $49.00
+                    </h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
+                  </div>
+                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      $50.00 - $99.00
+                    </h2>
+                    <span className="">
+                      <BsXLg className="" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-4 col-6">
+                  <div className=" card tw-mb-7">
+                    <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
+                      New
+                    </div>
 
-                      <div className="card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-6.jpg"
-                            alt="..."
-                          />
-                          <img
-                            className="card-img-top card-img-front"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-121.jpg"
-                            alt="..."
-                          />
-                        </a>
+                    <div className=" card-img ">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-5.jpg"
+                          alt="..."
+                        />
+                        <img
+                          className="card-img-top card-img-front"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-120.jpg"
+                          alt="..."
+                        />
+                      </a>
 
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="card-body tw-px-0">
-                        <div className="fs-xs card-title">
-                          <a className="text-muted" href="">
-                            Shoes
+                      <div className="card-actions ">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
                           </a>
-                        </div>
-
-                        <div className="fw-bold">
-                          <a className="text-body" href="product.html">
-                            Leather mid-heel Sandals
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
                           </a>
-                        </div>
-
-                        <div className="fw-bold text-muted">$129.00</div>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="col-6 col-md-4">
-                    <div className="card mb-7">
-                      <div className="badge bg-dark card-badge card-badge-start text-uppercase">
-                        Sale
-                      </div>
-
-                      <div className="card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-122.jpg"
-                            alt="..."
-                          />
-                          <img
-                            className="card-img-top card-img-front"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-7.jpg"
-                            alt="..."
-                          />
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
                         </a>
-
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
                       </div>
-                      <div className="card-body px-0">
-                        <div className="fs-xs">
-                          <a className="text-muted" href="">
-                            Shoes
-                          </a>
-                        </div>
 
-                        <div className="fw-bold">
-                          <a className="text-body" href="product.html">
-                            Leather mid-heel Sandals
-                          </a>
-                        </div>
-
-                        <div className="fw-bold text-muted">$129.00</div>
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
                       </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="col-6 col-md-4">
-                    <div className="card mb-7">
-                      <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
-                        New
-                      </div>
+                <div className="col-lg-4 col-6">
+                  <div className="card tw-mb-7">
+                    <div className="badge bg-white text-body card-badge card-badge-start tw-text-uppercase">
+                      New
+                    </div>
 
-                      <div className="card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-8.jpg"
-                            alt="..."
-                          />
-                        </a>
+                    <div className="card-img">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-6.jpg"
+                          alt="..."
+                        />
+                        <img
+                          className="card-img-top card-img-front"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-121.jpg"
+                          alt="..."
+                        />
+                      </a>
 
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="card-body px-0">
-                        <div className="fs-xs card-title">
-                          <a className="text-muted" href="">
-                            Shoes
+                      <div className="card-actions">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
                           </a>
-                        </div>
-
-                        <div className="fw-bold">
-                          <a className="text-body" href="product.html">
-                            Leather mid-heel Sandals
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
                           </a>
-                        </div>
-
-                        <div className="fw-bold text-muted">$129.00</div>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-xs btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="col-6 col-md-4">
-                    <div className="card mb-7">
-                      <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
-                        New
-                      </div>
-
-                      <div className="card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-9.jpg"
-                            alt="..."
-                          />
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
                         </a>
-
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
                       </div>
 
-                      <div className="card-body px-0">
-                        <div className="fs-xs card-title">
-                          <a className="text-muted" href="">
-                            Shoes
-                          </a>
-                        </div>
-
-                        <div className="fw-bold">
-                          <a className="text-body" href="product.html">
-                            Leather mid-heel Sandals
-                          </a>
-                        </div>
-
-                        <div className="fw-bold text-muted">$129.00</div>
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
                       </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="col-6 col-md-4">
-                    <div className="card mb-7">
-                      <div className="badge bg-dark card-badge card-badge-start text-uppercase">
-                        Sale
-                      </div>
+                <div className="col-lg-4 col-6">
+                  <div className="card tw-mb-7">
+                    <div className="badge bg-dark card-badge card-badge-start text-uppercase">
+                      Sale
+                    </div>
 
-                      <div className="card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-10.jpg"
-                            alt="..."
-                          />
-                          <img
-                            className="card-img-top card-img-front"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-123.jpg"
-                            alt="..."
-                          />
-                        </a>
+                    <div className="card-img">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-122.jpg"
+                          alt="..."
+                        />
+                        <img
+                          className="card-img-top card-img-front"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-7.jpg"
+                          alt="..."
+                        />
+                      </a>
 
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="card-body px-0">
-                        <div className="fs-xs card-title">
-                          <a className="text-muted" href="">
-                            Shoes
+                      <div className="card-actions">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
                           </a>
-                        </div>
-
-                        <div className="fw-bold">
-                          <a className="text-body" href="product.html">
-                            Leather mid-heel Sandals
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
                           </a>
-                        </div>
-
-                        <div className="fw-bold text-muted">$129.00</div>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-xs btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
                       </div>
                     </div>
-                  </div>
-
-                  <div className="col-6 col-md-4">
-                    <div className="card mb-7">
-                      <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
-                        New
-                      </div>
-
-                      <div className="card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-11.jpg"
-                            alt="..."
-                          />
-                          <img
-                            className="card-img-top card-img-front"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-124.jpg"
-                            alt="..."
-                          />
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
                         </a>
-
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
                       </div>
 
-                      <div className="card-body px-0">
-                        <div className="fs-xs card-title">
-                          <a className="text-muted" href="">
-                            Shoes
-                          </a>
-                        </div>
-
-                        <div className="fw-bold">
-                          <a className="text-body" href="product.html">
-                            Leather mid-heel Sandals
-                          </a>
-                        </div>
-
-                        <div className="fw-bold text-muted">$129.00</div>
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
                       </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="col-6 col-md-4">
-                    <div className="card mb-7">
-                      <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
-                        New
+                <div className="col-lg-4 col-6">
+                  <div className="card tw-mb-7">
+                    <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
+                      New
+                    </div>
+
+                    <div className="card-img">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-8.jpg"
+                          alt="..."
+                        />
+                      </a>
+
+                      <div className="card-actions">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-xs btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
                       </div>
+                    </div>
 
-                      <div className="card-img">
-                        <a className="card-img-hover">
-                          <img
-                            className="card-img-top card-img-back"
-                            src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-12.jpg"
-                            alt="..."
-                          />
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
                         </a>
-
-                        <div className="card-actions">
-                          <span className="card-action eye">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modalProduct"
-                            >
-                              <i className="">
-                                <FiEye className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action shop">
-                            <a
-                              className="btn btn-lg btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <FiShoppingCart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                          <span className="card-action heart">
-                            <a
-                              className="btn btn-xs btn-circle btn-white"
-                              data-toggle="button"
-                            >
-                              <i className="">
-                                <BiHeart className=" tw-text-2xl" />
-                              </i>
-                            </a>
-                          </span>
-                        </div>
                       </div>
 
-                      <div className="">
-                        <div className="">
-                          <div className="">
-                            <a className="text-muted text-lg " href="">
-                              Shoes
-                            </a>
-                          </div>
-
-                          <div className=" fw-semibold text-xl">
-                            <a className="text-body mb-3" href="#">
-                              Leather mid-heel Sandals
-                            </a>
-                          </div>
-
-                          <div className=" fw-bold text-muted text-lg ">
-                            $129.00
-                          </div>
-                        </div>
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
                       </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-4 col-6">
+                  <div className="card tw-mb-7">
+                    <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
+                      New
+                    </div>
+
+                    <div className="card-img">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-9.jpg"
+                          alt="..."
+                        />
+                      </a>
+
+                      <div className="card-actions">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-xs btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
+                        </a>
+                      </div>
+
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
+                      </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-4 col-6">
+                  <div className="card tw-mb-7">
+                    <div className="badge bg-dark card-badge card-badge-start text-uppercase">
+                      Sale
+                    </div>
+
+                    <div className="card-img">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-10.jpg"
+                          alt="..."
+                        />
+                        <img
+                          className="card-img-top card-img-front"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-123.jpg"
+                          alt="..."
+                        />
+                      </a>
+
+                      <div className="card-actions">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-xs btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
+                        </a>
+                      </div>
+
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
+                      </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-4 col-6">
+                  <div className="card tw-mb-7">
+                    <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
+                      New
+                    </div>
+
+                    <div className="card-img">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-11.jpg"
+                          alt="..."
+                        />
+                        <img
+                          className="card-img-top card-img-front"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-124.jpg"
+                          alt="..."
+                        />
+                      </a>
+
+                      <div className="card-actions">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-xs btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
+                        </a>
+                      </div>
+
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
+                      </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-4 col-6">
+                  <div className="card tw-mb-7">
+                    <div className="badge bg-white text-body card-badge card-badge-start text-uppercase">
+                      New
+                    </div>
+
+                    <div className="card-img">
+                      <a className="card-img-hover">
+                        <img
+                          className="card-img-top card-img-back"
+                          src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-12.jpg"
+                          alt="..."
+                        />
+                      </a>
+
+                      <div className="card-actions">
+                        <span className="card-action eye">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProduct"
+                          >
+                            <i className="">
+                              <FiEye className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action shop">
+                          <a
+                            className="btn btn-lg btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <FiShoppingCart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                        <span className="card-action heart">
+                          <a
+                            className="btn btn-xs btn-circle btn-white"
+                            data-toggle="button"
+                          >
+                            <i className="">
+                              <BiHeart className=" tw-text-lg" />
+                            </i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className=" -tw-mt-8 tw-p-2  tw-mb-3 ">
+                      <div className=" ">
+                        <a className=" tw-text-sm tw-text-gray-600" href="">
+                          Shoes
+                        </a>
+                      </div>
+
+                      <div className="tw-font-medium">
+                        <a className="" href="">
+                          Leather mid-heel Sandals
+                        </a>
+                      </div>
+
+                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          
         </div>
-        <div className=" d-flex justify-content-end tw-mb-8">
+        <div className=" d-flex justify-content-end tw-my-8">
           <nav aria-label="...">
             <ul className="pagination">
               <li className="page-item disabled">
