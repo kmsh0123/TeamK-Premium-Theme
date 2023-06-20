@@ -3,15 +3,30 @@ import "../components/contact.css";
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import { BsArrowRightShort } from "react-icons/bs";
+import { Anchor, Breadcrumbs } from "@mantine/core";
 
 const Contact = () => {
+  const items = [
+    { title: "Home", href: "#" },
+    { title: "Contact Us", href: "#" },
+  ].map((item, i) => {
+    return (
+      <Anchor className="tw-text-gray-500 tw-text-sm" key={i} href={item.href}>
+        {item.title}
+      </Anchor>
+    );
+  });
+
   return (
     <div className="">
       {/* content */}
-      <section className="tw-pt-7 tw-pb-12 tw-h-[3000px]">
+      <section className="tw-pt-7 tw-pb-12">
         <div className="container">
           <div className="row">
             <div className="col-12  tw-mb-5">
+              <div className="tw-flex tw-justify-between tw-mb-10">
+                <Breadcrumbs className="">{items}</Breadcrumbs>
+              </div>
               <h3 className="tw-mb-10 tw-text-center tw-text-3xl ">
                 Contact Us
               </h3>
@@ -107,7 +122,9 @@ const Contact = () => {
                   placeholder="Message *"
                 ></textarea>
               </div>
-              <button className="tw-bg-black tw-text-white tw-py-4 tw-px-7">Send Message</button>
+              <button className="tw-bg-black tw-text-white tw-py-4 tw-px-7">
+                Send Message
+              </button>
             </div>
           </div>
         </div>

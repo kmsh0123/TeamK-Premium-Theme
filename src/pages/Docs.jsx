@@ -4,7 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import "../components/docs.css";
 
 const Docs = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const Toggle = () => {
     let x = document.getElementById("myLinks");
@@ -15,7 +15,6 @@ const Docs = () => {
     }
     setShow(!show);
   };
-
 
   const items = [
     { title: "Docs", href: "#" },
@@ -29,20 +28,23 @@ const Docs = () => {
   });
 
   return (
-    <div className=" container-fluid tw-mt-20">
-      <div className="row ">
+    <div className=" container-fluid tw-mt-20 main parent">
+      <div className="row sticky">
         {/* Left */}
         {/* Navbar */}
         <div className=" col-12 col-md-4 col-lg-3 col-xl-2">
-          <div className="">
-            <div className="tw-flex tw-justify-between tw-mb-5 nav_bar ">
+          <div className="dropdown">
+            <div className="tw-flex tw-justify-between tw-mb-5">
               <Breadcrumbs className="">{items}</Breadcrumbs>
               <button className="tw-cursor-pointer" onClick={Toggle}>
                 <AiOutlineMenu className="tw-text-2xl" />
               </button>
             </div>
             {/* menu list */}
-            <div className="tw-py-3 md:tw-py-10 md:tw-px-8" id="myLinks">
+            <div
+              className="tw-py-3 md:tw-py-10 md:tw-px-8 scroll tw-h-[2000px] md:tw-h-[1000px]"
+              id="myLinks"
+            >
               <p className=" tw-uppercase tw-mb-5">Getting Started</p>
               <ul className="tw-text-gray-500 tw-leading-9 tw-mb-5">
                 <li className="">
@@ -113,7 +115,7 @@ const Docs = () => {
         </div>
         {/* Right */}
         <div className="col-12 col-md-8 col-lg-9 col-xl-10">
-          <section className="md:tw-px-10 tw-py-10">
+          <section className="md:tw-px-10 tw-py-10 right_side">
             <h3 className="tw-mb-5 tw-text-2xl">Introduction</h3>
             <p className="tw-tracking-wide tw-leading-6 tw-text-gray-500">
               This guide will help you get started with Shopper! All the

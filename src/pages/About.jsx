@@ -6,11 +6,27 @@ import { CiRepeat } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { GoTag } from "react-icons/go";
 import { Carousel } from "@mantine/carousel";
+import { Anchor, Breadcrumbs } from "@mantine/core";
 
 const About = () => {
+
+  const items = [
+    { title: "Home", href: "#" },
+    { title: "About", href: "#" },
+  ].map((item, i) => {
+    return (
+      <Anchor className="tw-text-gray-500 tw-text-sm" key={i} href={item.href}>
+        {item.title}
+      </Anchor>
+    );
+  });
+
   return (
     <div className="">
       {/* header */}
+      <div className=" tw-mb-10 tw-mt-10">
+              <Breadcrumbs className="">{items}</Breadcrumbs>
+            </div>
       <section className="">
         <div className="container tw-mt-20">
           <div className="row tw-justify-center tw-py-[10rem] bg-cover">
