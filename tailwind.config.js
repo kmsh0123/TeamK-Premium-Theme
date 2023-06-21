@@ -7,9 +7,10 @@ export default {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
     ],
   theme: {
+    fontFamily : {
+        'jost' : ['Jost', 'sans-serif']
+    },
     extend: {},
   },
-  plugins: [
-    require('flowbite/plugin')
-]
+  plugins: [require('flowbite/plugin')],
 }
