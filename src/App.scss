@@ -1,3 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+
+:root{
+    --bs-primary: #ff6f61;
+    --bs-secondary: #a6a6a6;
+    --bs-success: #28bb74;
+    --bs-info: #3b86ff;
+    --bs-warning: #ff9736;
+    --bs-danger: #ff6f61;
+    --bs-gray: #3e3e3e;
+    --bs-gray-dark: #2b2b2b;
+    --bs-gray-100: #e5e5e5;
+    --bs-gray-200: #d8d8d8;
+    --bs-gray-300: #bababa;
+    --bs-gray-400: #909090;
+    --bs-gray-500: #525252;
+    --bs-gray-600: #3e3e3e;
+    --bs-gray-700: #303030;
+    --bs-gray-800: #2b2b2b;
+    --bs-gray-900: #1f1f1f;
+}
+
+// Custom.scss
+// Option B: Include parts of Bootstrap
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+// 2. Include any default variable overrides here
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+
+$font-family-sans-serif : "Jost"; 
+$primary : #ff6f61;
+$secondary : #a6a6a6;
+$success : #28bb74;
+$info : #3b86ff;
+$warning : #ff9736;
+$danger : #ff6f61;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+// 4. Include any default map overrides here
+// 5. Include remainder of required parts
+
+$theme-colors: (
+  "primary": $primary,
+    "secondary" : $secondary,
+    "success" : $success,
+    "info" : $info,
+    "warning" : $warning,
+    "danger" : $danger,
+
+);
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+.fs--1{
+    font-size: .8125rem;
+}
+
+.fs--2{
+    font-size: .9375rem;
+}
+
+.pt-7{
+
+    padding-top: 2rem;
+}
+
+.pb-7{
+
+    padding-bottom: 2rem;
+}
+
+.pt-12{
+    padding-top: 6rem;
+}
+
+.mb-10 {
+    margin-bottom: 4rem;
+}
+
+.mb-7 {
+    margin-bottom: 2rem;
+}
+
+.mt-7 {
+    margin-top: 2rem;
+}
+
+.mt-10 {
+    margin-top: 5rem;
+    // margin-bottom: 5rem;
+
+}
+
+.py-12{
+
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.py-13{
+
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.fs--1-w{
+    font-weight: 500;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.text-gray-400{
+    color:  #909090;
+}
+
+.text-gray-500 {
+    color: #525252
+}
+
+.hero-1{
+    background-image: url('./img/hero-1.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.hero-2{
+    background-image: url('./img/hero-2.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.hero-3{
+    background-image: url('./img/hero-3.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.pro-1{
+    min-height: 400px;
+    background-image: url('./img/product-1.jpg');
+    background-repeat: no-repeat;
+    transition: 2s ease-in linear;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.pro-2{
+    min-height: 400px;
+    background-image: url('./img/product-2.jpg');
+    background-repeat: no-repeat;
+    transition: 2s ease-in linear;
+    background-position: 50%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.pro-3{
+    min-height: 400px;
+    background-image: url('./img/product-3.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.pro-4{
+    min-height: 400px;
+    background-image: url('./img/product-4.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.mb-mn{
+
+    margin-bottom: -70px;
+}
+
+.custom-btn{
+    border: 1px solid transparent;
+    border-radius: 0;
+    color: #1f1f1f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 0.875rem 1.75rem;
+    text-align: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+ 
+}
+
+.save{
+
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    right: 1.25rem;
+    top: 1.25rem;
+    position: absolute;
+    z-index: 2000;
+    
+}
+
+.hover-bg:hover{
+    background-color: rgba(31,31,31,.15)!important;
+}
+
+.bi-arrow-right{
+    transition: all .2s ease-in-out;
+    transition-property: transform;
+}
+
+.hover-bg:hover> .link>.move>.bi-arrow-right {
+    transform: translateX(0.25rem);
+}
+
+.hover-bg-2:hover{
+    background-color: rgba(31,31,31,.15)!important;
+
+}
+
+.hover-bg-2:hover> .link>.move-2>.bi-arrow-right {
+    transform: translateX(0.25rem);
+}
+
+.hover-bg-3:hover{
+    background-color: rgba(31,31,31,.15)!important;
+
+}
+
+.hover-bg-3:hover .link>.move-3>.bi-arrow-right {
+    transform: translateX(0.25rem);
+}
+
+.pro-1:hover{
+    transform: translateX(-0.25rem);
+}
+
+.card:hover .link>.move>.bi-arrow-right{
+    transform: translateX(0.25rem);
+}
+
+.pro1-bg{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .2s ease-in-out;
+    transition-property: transform;
+    width: calc(100% + 0.25rem);
+}
+
+.card{
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    border: 0 solid hsla(0,0%,7%,.125);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+}
+
+.card-bg{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.card-bg~*{
+    z-index: 1;
+}
+
+.pro-2:hover{
+    transform: translateX(-0.25rem);
+    .ani>.link>.move>.bi-arrow-right{
+        transform: translateX(0.25rem);
+
+    }
+}
+
+
+.pro-3:hover{
+    transform: translateX(-0.25rem);
+    .link>.move>.bi-arrow-right{
+        transform: translateX(0.25rem);
+
+    }
+}
+
+
+.pro-bg{
+    width: calc(100% + 0.25rem);
+    height: 100%;
+    overflow: hidden;
+}
+
+.pro-4:hover{
+    transform: translateX(-0.25rem);
+    .link>.move>.bi-arrow-right{
+        transform: translateX(0.25rem);
+
+    }
+}
+
+.card-badge {
+    position: absolute;
+    top: 1.25rem;
+    z-index: 1;
+}
+
+.sh-nav{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.sh-nav-link{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    position: relative;
+}
+
+.sh-nav>a{
+
+    text-decoration: none;
+}
+
+.sh-nav>.active{
+    
+    color: var(--bs-primary)!important;
+    
+}
+
+.sh-nav>.active::before{
+
+    border-top: 1px solid #ff6f61;
+    bottom: 0.25rem;
+    content: "";
+    left: 0.75rem;
+    position: absolute;
+    right: 0.75rem;
+}
+
+.sh-card-img-hover .card-img-top{
+    transition: opacity .2s ease-in-out;
+}
+
+.sh-card-img>a{
+    transition: all .1s ease-in-out;
+    transition-property: color;
+}
+
+.sh-card-img-hover .img-back{
+    opacity: 0;
+}
+
+.sh-card-img-hover>*{
+    float: left !important;
+}
+
+.sh-card-img-hover .img-front{
+    margin-left: -100%;
+}
+
+.sh-card-img-hover .card-img-top{
+    width: 100%;
+}
+
+.sh-card-actions{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.sh-card-action{
+    left: 0;
+    opacity: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: translateY(0.5rem);
+    transition: all .1s ease-in-out;
+    transition-property: transform,opacity;
+    margin-left: 10px;
+}
+
+
+.btn-circle{
+    align-items: center;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    width: calc(2.40625rem + 2px);
+    height: calc(2.40625rem + 2px);
+}
+
+
+.sh-btn-white-primary {
+    background-color: #fff;
+    border: 1px solid transparent;
+}
+
+.sh-btn-white-primary:hover{
+    background-color: var(--bs-primary);
+}
+
+.sh-btn-xs{
+    font-size: .9375rem;
+    line-height: 1.40625rem; 
+    padding: 0.5rem 0.75rem;
+}
+
+.sh-card-img-hover:hover .img-back{
+    opacity: 1;
+    
+}
+
+.sh-card-img-hover:hover .img-front{
+    opacity: 0;
+    
+}
+
+.sh-card-img-hover:hover .sh-card-actions .sh-card-action{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.sh-card-actions .sh-card-action::nth-child(2){
+
+    transition-delay: 75ms;
+}
+
+.sh-card-actions .sh-card-action:last-child{
+
+    transition-delay: .15s;
+}
+
+.sh-badge{
+
+    display: inline-block;
+    font-size: .6875em;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.5em 1em;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.discover{
+
+    transition: all .1s ease-in-out ;
+
+}
+
+.discover::before{
+
+    border-bottom: 1px solid ;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: left center;
+    transition: all 0.2s ease-in-out ;
+   
+}
+
+.discover:hover:before{
+    transform-origin: right center;
+    transform: scaleX(0);
+    transition-property: transform;
+}
+
+.count{
+    background-image: url(./img/countDown.jpg);
+    background-repeat: no-repeat;
+    object-fit: fill;
+    background-position: 50%;
+}
+
+.count-btn{
+    background-color: #1f1f1f;
+    transition: transform .5s ease-in;
+}
+
+
+.count-btn:hover .count-arrow{
+    transform: translateX(0.25rem);
+}
+
+.review-card{
+
+    width: 300px;
+    margin: auto;
+
+}
+
+.bg-light{
+    background-color: #F1F1F1;
+}
+
+.action{
+    transition: background-color .2s ease-in-out;
+}
+
+.shopper:hover .action{
+    background-color: rgba(31,31,31,.4) !important;
+}
+
+.overlay{
+    opacity: 0;
+}
+
+.shopper:hover .action>.overlay{
+   opacity: 1 !important;
+}
+
+.fs-small{
+    font-size: 13px;
+}
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+   
 
