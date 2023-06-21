@@ -7,7 +7,7 @@
     --bs-success: #28bb74;
     --bs-info: #3b86ff;
     --bs-warning: #ff9736;
-    --bs-danger: #ff6f61;
+    --bs-danger: #E66457;
     --bs-gray: #3e3e3e;
     --bs-gray-dark: #2b2b2b;
     --bs-gray-100: #e5e5e5;
@@ -35,6 +35,11 @@ $success : #28bb74;
 $info : #3b86ff;
 $warning : #ff9736;
 $danger : #ff6f61;
+$border-radius-lg : none;
+$border-color-translucent : none;
+$modal-inner-padding : 0;
+$modal-content-border-color : none;
+$modal-content-border-radius : none;
 
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
@@ -242,7 +247,7 @@ $theme-colors: (
     transition-property: transform;
 }
 
-.hover-bg:hover> .link>.move>.bi-arrow-right {
+.hover-bg:hover .link .a .move>.bi-arrow-right {
     transform: translateX(0.25rem);
 }
 
@@ -251,7 +256,7 @@ $theme-colors: (
 
 }
 
-.hover-bg-2:hover> .link>.move-2>.bi-arrow-right {
+.hover-bg-2:hover> .link .a .move-2>.bi-arrow-right {
     transform: translateX(0.25rem);
 }
 
@@ -260,7 +265,7 @@ $theme-colors: (
 
 }
 
-.hover-bg-3:hover .link>.move-3>.bi-arrow-right {
+.hover-bg-3:hover .link .a .move-3>.bi-arrow-right {
     transform: translateX(0.25rem);
 }
 
@@ -268,7 +273,18 @@ $theme-colors: (
     transform: translateX(-0.25rem);
 }
 
-.card:hover .link>.move>.bi-arrow-right{
+.best-card{
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    border: 0 solid hsla(0,0%,7%,.125);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+}
+
+.best-card:hover .link a .move>.bi-arrow-right{
     transform: translateX(0.25rem);
 }
 
@@ -282,7 +298,7 @@ $theme-colors: (
     width: calc(100% + 0.25rem);
 }
 
-.card{
+.sh-card{
     word-wrap: break-word;
     background-clip: border-box;
     background-color: #fff;
@@ -293,7 +309,7 @@ $theme-colors: (
     position: relative;
 }
 
-.card-bg{
+.best-card-bg{
     height: 100%;
     left: 0;
     overflow: hidden;
@@ -302,7 +318,7 @@ $theme-colors: (
     width: 100%;
 }
 
-.card-bg~*{
+.best-card-bg~*{
     z-index: 1;
 }
 
@@ -424,7 +440,7 @@ $theme-colors: (
     transform: translateY(0.5rem);
     transition: all .1s ease-in-out;
     transition-property: transform,opacity;
-    margin-left: 10px;
+    
 }
 
 
@@ -565,18 +581,23 @@ $theme-colors: (
 }
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+.my-modal{
+    background-color: rgba($color: #ffff, $alpha: 0.5)
+}
+
+.my-modal-img{
+
+    object-position: 50%;
+    object-fit: cover;
+}
+
+.active-border{
+    border-color: black !important;
+}
 
 
-
-
-
-
-
-
-
-
-
-   
-   
-   
-
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
