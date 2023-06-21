@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../components/about.css";
 import { FiArrowRight } from "react-icons/fi";
 import { CiDeliveryTruck } from "react-icons/ci";
@@ -7,6 +7,9 @@ import { CiLock } from "react-icons/ci";
 import { GoTag } from "react-icons/go";
 import { Carousel } from "@mantine/carousel";
 import { Anchor, Breadcrumbs } from "@mantine/core";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const About = () => {
 
@@ -21,13 +24,17 @@ const About = () => {
     );
   });
 
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  },[])
+
   return (
-    <div className="">
+    <div className="container ">
       {/* header */}
-      <div className=" tw-mb-10 tw-mt-10">
+      <div className=" tw-mb-10 tw-mt-10 container">
               <Breadcrumbs className="">{items}</Breadcrumbs>
             </div>
-      <section className="">
+      <section className="" data-aos="fade-up">
         <div className="container tw-mt-20">
           <div className="row tw-justify-center tw-py-[10rem] bg-cover">
             <div className=" col-12 col-md-8 col-lg-6 col-xl-5">
@@ -39,8 +46,8 @@ const About = () => {
         </div>
       </section>
       {/* About our store */}
-      <section>
-        <div className="container tw-items-center tw-mt-20">
+      <section data-aos="fade-right">
+        <div className="container tw-items-center tw-mt-20" >
           <div className="row tw-items-center">
             <div className="col-12 col-md-6 tw-mb-20">
               <img
@@ -76,7 +83,7 @@ const About = () => {
         </div>
       </section>
       {/* Fashion Democracy */}
-      <section className=" tw-py-10 tw-bg-gray-100 tw-mt-10">
+      <section className=" tw-py-10 tw-bg-gray-100 tw-mt-10" data-aos="fade-left">
         <div className="container">
           <div className="row tw-my-16">
             <div className="col-12">
@@ -122,7 +129,7 @@ const About = () => {
         </div>
       </section>
       {/* our story */}
-      <section className="tw-my-20">
+      <section className="tw-my-20" data-aos="fade-down">
         <div className="container">
           <div className="row tw-items-center">
             <div className="col-12 col-md-6 tw-mb-9">
@@ -162,7 +169,7 @@ const About = () => {
         </div>
       </section>
       {/* Red square */}
-      <section className="tw-mt-10">
+      <section className="tw-mt-10" data-aos="zoom-out-up">
         <div className="container">
           <div className="row tw-bg-red-500 tw-py-12">
             <div className="col-12">
@@ -177,10 +184,10 @@ const About = () => {
         </div>
       </section>
       {/* images */}
-      <section className="tw-mt-20">
+      <section className="tw-mt-20" >
         <div className="container">
           <div className="row tw-justify-center">
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6" data-aos="fade-right">
               <img
                 src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-116.jpg"
                 alt=""
@@ -192,7 +199,7 @@ const About = () => {
                 className="tw-mb-7"
               />
             </div>
-            <div className="col-12 col-md-6 md:tw-mt-24">
+            <div className="col-12 col-md-6 md:tw-mt-24" data-aos="fade-left">
               <img
                 src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-118.jpg"
                 alt=""
@@ -208,7 +215,7 @@ const About = () => {
         </div>
       </section>
       {/* reviews */}
-      <section className="tw-mt-20">
+      <section className="tw-mt-20" data-aos="flip-down">
         <div className="container carousel">
           <div className="row tw-w-[100%] tw-mx-auto">
             <div className="col-12 tw-text-center tw-mb-10" id="">
@@ -274,7 +281,7 @@ const About = () => {
         </div>
       </section>
       {/* shopper btn */}
-      <section className="tw-mt-5">
+      <section className="tw-mt-5" data-aos="zoom-out-up">
         <div className="container social-bg">
           <div className="row">
             <div className="col-12 tw-text-center">
@@ -286,10 +293,10 @@ const About = () => {
         </div>
       </section>
       {/* services */}
-      <section className="tw-my-10">
+      <section className="tw-mt-20 tw-mb-20" >
         <div className="container">
           <div className="row tw-items-center">
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up-right">
               <div className="tw-flex tw-mb-6 tw-items-center">
                 <CiDeliveryTruck className="tw-text-xl tw-text-orange-500" />
                 <div className="tw-ms-6">
@@ -300,7 +307,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up">
               <div className="tw-flex tw-mb-6 tw-items-center">
                 <CiRepeat className="tw-text-xl tw-text-orange-500" />
                 <div className="tw-ms-6">
@@ -313,7 +320,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up">
               <div className="tw-flex tw-mb-6 tw-items-center">
                 <CiLock className="tw-text-xl tw-text-orange-500" />
                 <div className="tw-ms-6">
@@ -324,7 +331,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up-left">
               <div className="tw-flex tw-mb-6 tw-items-center">
                 <GoTag className="tw-text-xl tw-text-orange-500" />
                 <div className="tw-ms-6">
