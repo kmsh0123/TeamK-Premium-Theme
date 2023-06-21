@@ -10,7 +10,7 @@ import { BsMedium } from "react-icons/bs";
 const Footer = () => {
   return (
     <div>
-      <footer className=" tw-mb-[-75px] tw-bg-center tw-bg-cover tw-bg-[url('https://yevgenysim-turkey.github.io/shopper/assets/img/patterns/pattern-2.svg')] tw-bg-opacity-100 tw-bg-[#1f1f1f]">
+      <footer className=" tw-mb-[-100px] lg:tw-mb-[-75px] tw-bg-center tw-bg-cover tw-bg-[url('https://yevgenysim-turkey.github.io/shopper/assets/img/patterns/pattern-2.svg')] tw-bg-opacity-100 tw-bg-[#1f1f1f]">
         <div className="tw-mx-auto tw-w-full tw-max-w-screen-xl tw-p-4 tw-py-6 lg:tw-py-8">
           <div className=" tw-flex tw-flex-col tw-items-center tw-my-16 md:tw-my-[60px]">
             <h2 className=" md:tw-mb-[-22px] tw-text-white tw-text-[25px] md:tw-text-2xl tw-font-medium">
