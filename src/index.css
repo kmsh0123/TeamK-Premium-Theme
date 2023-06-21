@@ -1,6 +1,4 @@
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap");
@@ -14893,34 +14891,32 @@ textarea.form-control-lg {
 }
 
 /*# sourceMappingURL=index.css.map */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .dropdown {
     position: relative;
-
+    transition: all .2s ease-in-out;
+    transition-property: visibility,transform,opacity;
 }
   .dropdown-menu {
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
-    left: 0;
     background-color: #f9f9f9;
-    min-width: 125px;
-    margin-top: 1px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  .dropdown:hover .dropdown-menu {
+    min-width : 60px;
+    margin-top : 2px;
+    box-shadow : 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  .dropdown:hover .dropdown-menu{
     display: block;
-    transition: 2000ms ease-in-out;
   }
   
   .dropdown-menu ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding : 0;
+    margin : 0;
   }
   
   .dropdown-menu li {
@@ -14935,10 +14931,6 @@ textarea.form-control-lg {
   
   /* Responsive Styles */
   @media (max-width: 768px) {
-    .dropdown {
-      display: block;
-      margin-bottom: 10px;
-    }
   
     .dropdown-toggle {
       width: 100%;
@@ -14946,11 +14938,17 @@ textarea.form-control-lg {
     }
   
     .dropdown-menu {
-      position: static;
+      position: absolute;
       display: block;
       box-shadow: none;
     }
+
   }
-  
 
-
+  .table-p{
+    padding: 1.5rem !important;
+  }
+   
+  .active{
+    color : #ff6f61
+  }
