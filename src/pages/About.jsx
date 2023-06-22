@@ -7,12 +7,11 @@ import { CiLock } from "react-icons/ci";
 import { GoTag } from "react-icons/go";
 import { Carousel } from "@mantine/carousel";
 import { Anchor, Breadcrumbs } from "@mantine/core";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Aos from "aos";
 
 const About = () => {
-
   const items = [
     { title: "Home", href: "#" },
     { title: "About", href: "#" },
@@ -24,16 +23,16 @@ const About = () => {
     );
   });
 
-  useEffect(()=>{
-    Aos.init({duration: 2000})
-  },[])
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   return (
     <div className="container ">
       {/* header */}
       <div className=" tw-mb-10 tw-mt-10 container">
-              <Breadcrumbs className="">{items}</Breadcrumbs>
-            </div>
+        <Breadcrumbs className="">{items}</Breadcrumbs>
+      </div>
       <section className="" data-aos="fade-up">
         <div className="container tw-mt-20">
           <div className="row tw-justify-center tw-py-[10rem] bg-cover">
@@ -47,7 +46,7 @@ const About = () => {
       </section>
       {/* About our store */}
       <section data-aos="fade-right">
-        <div className="container tw-items-center tw-mt-20" >
+        <div className="container tw-items-center tw-mt-20">
           <div className="row tw-items-center">
             <div className="col-12 col-md-6 tw-mb-20">
               <img
@@ -83,7 +82,10 @@ const About = () => {
         </div>
       </section>
       {/* Fashion Democracy */}
-      <section className=" tw-py-10 tw-bg-gray-100 tw-mt-10" data-aos="fade-left">
+      <section
+        className=" tw-py-10 tw-bg-gray-100 tw-mt-10"
+        data-aos="fade-left"
+      >
         <div className="container">
           <div className="row tw-my-16">
             <div className="col-12">
@@ -121,8 +123,8 @@ const About = () => {
           </div>
           <div className="row  tw-mt-14 ">
             <div className="col-12 tw-text-center">
-              <button className="tw-py-4 tw-bg-gray-800 tw-text-white tw-tracking-wide tw-w-[25%] lg:tw-w-[15%] tw-items-center">
-                Shop Now <FiArrowRight className="tw-inline-block" />
+              <button className="tw-py-4 tw-bg-gray-800 tw-text-white hover:tw-translate-y-[-10px] tw-duration-200 tw-tracking-wide tw-w-[30%] lg:tw-w-[15%] tw-items-center ">
+                Shop Now <FiArrowRight className="tw-inline-block " />
               </button>
             </div>
           </div>
@@ -184,7 +186,7 @@ const About = () => {
         </div>
       </section>
       {/* images */}
-      <section className="tw-mt-20" >
+      <section className="tw-mt-20">
         <div className="container">
           <div className="row tw-justify-center">
             <div className="col-12 col-md-6" data-aos="fade-right">
@@ -293,7 +295,7 @@ const About = () => {
         </div>
       </section>
       {/* services */}
-      <section className="tw-mt-20 tw-mb-20" >
+      <section className="tw-mt-20 tw-mb-20">
         <div className="container">
           <div className="row tw-items-center">
             <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up-right">
