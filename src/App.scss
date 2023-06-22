@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
+
 :root{
     --bs-primary: #ff6f61;
     --bs-secondary: #a6a6a6;
     --bs-success: #28bb74;
     --bs-info: #3b86ff;
     --bs-warning: #ff9736;
-    --bs-danger: #ff6f61;
+    --bs-danger: #E66457;
     --bs-gray: #3e3e3e;
     --bs-gray-dark: #2b2b2b;
     --bs-gray-100: #e5e5e5;
@@ -35,6 +36,11 @@ $success : #28bb74;
 $info : #3b86ff;
 $warning : #ff9736;
 $danger : #ff6f61;
+$border-radius-lg : none;
+$border-color-translucent : none;
+$modal-inner-padding : 0;
+$modal-content-border-color : none;
+$modal-content-border-radius : none;
 
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
@@ -242,7 +248,7 @@ $theme-colors: (
     transition-property: transform;
 }
 
-.hover-bg:hover> .link>.move>.bi-arrow-right {
+.hover-bg:hover .link .a .move>.bi-arrow-right {
     transform: translateX(0.25rem);
 }
 
@@ -251,7 +257,7 @@ $theme-colors: (
 
 }
 
-.hover-bg-2:hover> .link>.move-2>.bi-arrow-right {
+.hover-bg-2:hover> .link .a .move-2>.bi-arrow-right {
     transform: translateX(0.25rem);
 }
 
@@ -260,7 +266,7 @@ $theme-colors: (
 
 }
 
-.hover-bg-3:hover .link>.move-3>.bi-arrow-right {
+.hover-bg-3:hover .link .a .move-3>.bi-arrow-right {
     transform: translateX(0.25rem);
 }
 
@@ -268,7 +274,18 @@ $theme-colors: (
     transform: translateX(-0.25rem);
 }
 
-.card:hover .link>.move>.bi-arrow-right{
+.best-card{
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    border: 0 solid hsla(0,0%,7%,.125);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+}
+
+.best-card:hover .link a .move>.bi-arrow-right{
     transform: translateX(0.25rem);
 }
 
@@ -282,7 +299,7 @@ $theme-colors: (
     width: calc(100% + 0.25rem);
 }
 
-.card{
+.sh-card{
     word-wrap: break-word;
     background-clip: border-box;
     background-color: #fff;
@@ -293,7 +310,7 @@ $theme-colors: (
     position: relative;
 }
 
-.card-bg{
+.best-card-bg{
     height: 100%;
     left: 0;
     overflow: hidden;
@@ -302,7 +319,7 @@ $theme-colors: (
     width: 100%;
 }
 
-.card-bg~*{
+.best-card-bg~*{
     z-index: 1;
 }
 
@@ -424,7 +441,7 @@ $theme-colors: (
     transform: translateY(0.5rem);
     transition: all .1s ease-in-out;
     transition-property: transform,opacity;
-    margin-left: 10px;
+    
 }
 
 
@@ -563,20 +580,172 @@ $theme-colors: (
 .fs-small{
     font-size: 13px;
 }
+
+
+.bg-img1{
+	background-image: url("https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-24.jpg");
+	background-size: cover;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+   }
+   .bg-img2{
+	   background-image: url("https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-16.jpg");
+	   background-size: cover;
+	   background-position: bottom center;
+	   background-repeat: no-repeat;
+	  }
+   .bg-img3{
+	   background-image: url("	https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-29.jpg");
+	   background-size: cover;
+	   background-position: bottom center;
+	   background-repeat: no-repeat;
+	  }
+	  .bg-img4{
+	   background-image: url("	https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-30.jpg");
+	   background-size: cover;
+	   background-position: bottom center;
+	   background-repeat: no-repeat;
+	  }
+   .card{
+	  
+	   position: relative;
+	   cursor: pointer;
+   }
+   .card:hover .card-img-front{
+	   visibility: visible;
+   }
+   
+   .card-badge-start {
+	   left: 0;
+   }
+   
+   .card-badge{
+   position: absolute;	
+   top: 1.25rem;
+   z-index: 1;
+   }
+ 
+  
+   
+   .card-img-hover .card-img-front{
+	   position: absolute;
+	   visibility: hidden;
+
+	   top:0;
+	   left: 0;
+   }
+
+ 
+   .cus-btn-circle {
+	   align-items: center;
+	   border-radius: 50%;
+	   display: inline-flex;
+	   justify-content: center;
+	   padding: 0;
+	   width: calc(2.25rem + 2px);
+	   height: calc(2.25rem + 2px);
+   
+   }
+   
+   .cus-btn-white{
+	   background-color: #fff;
+	   color: #1f1f1f;
+   }
+   .cus-btn-circle:hover{
+   background-color: #ff6f61;
+   color: #fff;
+   }
+
+   .card-actions{
+	   position: relative;
+	   /* transition: all .1s ease-in-out; */
+   }
+   .card:hover .card-actions{
+	   transform: translateY(-3.5rem);
+	   transition: all .1s ease-in-out;
+   
+   }
+   
+   .eye{
+	   position: relative;
+	   right: 0;
+	   left: 0;
+	   top: 0;
+	   opacity: 0;
+	   margin-left: 3.5rem;
+	   opacity:0;
+   
+   }
+   /* @media only screen and (min-width: 600px) {
+    .eye{
+      margin-left: 15%;
+ 
+     }
+   }  */
+  
+   /* @media only screen and (max-width: 600px) {
+    .eye{
+      margin-left: 15%;
+    }
+    }; */
+   
+   .card-img:hover .eye{
+	   opacity: 1;
+   } 
+   .card-img:hover .shop{
+	transition-delay: .3s;
+	   visibility: visible;
+   } 
+   .card-img:hover .heart{
+	   transition-delay: .2s;
+   
+	   opacity: 1;
+   }
+   .shop {
+	   margin-left: 4.5rem;
+	   /* transition: all .5s ease-in-out; */
+   /* transition-delay: .7s; */
+	   position: absolute;
+	   visibility: hidden;
+	   /* transition-delay: .15s; */
+   
+   } 
+   .heart {
+	   margin-left: 1rem;
+	   /* transition: all .5s ease-in-out; */
+	   /* transition-delay: .5s; */
+   
+	   opacity: 0;
+   
+	   /* transition-delay: .17s; */
+   
+   }
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+.my-modal{
+    background-color: rgba($color: #ffff, $alpha: 0.5)
+}
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-modal-img{
 
 
+    object-position: 50%;
+    object-fit: cover;
+}
+
+.active-border{
+    border-color: black !important;
+}
 
 
-
-
-
-
-
-   
-   
-   
-
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
