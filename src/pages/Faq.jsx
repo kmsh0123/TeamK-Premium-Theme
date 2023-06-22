@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SecNavbar from '../components/SecNavbar'
 import Navbar from '../components/Navbar'
 import { Accordion } from '@mantine/core'
+import { useSelector } from 'react-redux'
 
 
 const Faq = () => {
@@ -10,17 +11,21 @@ const Faq = () => {
     // const toggleAccordion = () => {
     //   setOpen(!open);
     // };
+    const isOpen = useSelector((state) =>(state.navbar.isOpen));
+    const isOpen2 = useSelector((state) =>(state.navbar.isOpen2));
+    const isOpen3 = useSelector((state) =>(state.navbar.isOpen3));
+
 
   return (
     <>
       <Navbar/>
       <SecNavbar/>
     <div className="container">
-      <div className="tw-mt-28 tw-mb-10">
-        <h6 className='tw-text-3xl tw-font-semibold col-lg-12 text-center'>Frequently Asked Questions</h6>
-        <h1 className='tw-ml-[200px] tw-mt-12 tw-text-2xl tw-font-semibold'>Orders:</h1>
+      <div className={`${isOpen2 ? "tw-mt-[-9rem]":"tw-mt-[8rem]" } ${isOpen ? "tw-mt-28":"tw-mt-[6rem]"} tw-mb-10`}>
+        <h6 className='md:tw-text-3xl tw-text-[1.5rem] tw-font-semibold col-lg-12 text-center'>Frequently Asked Questions</h6>
+        <h1 className='lg:tw-ml-[200px] tw-ml-7 tw-mt-12 tw-text-2xl tw-font-semibold'>Orders:</h1>
       </div>
-  <div className="container tw-w-[69.5%]"> 
+  <div className="container lg:tw-w-[69.5%]"> 
   
       <Accordion className='tw-cursor-pointer'>
   <Accordion.Item value="customization">

@@ -2,14 +2,18 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import SecNavbar from '../components/SecNavbar'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Shipping = () => {
+  const isOpen = useSelector((state) =>(state.navbar.isOpen));
+  const isOpen2 = useSelector((state) =>(state.navbar.isOpen2));
+
   return (
     <>
       <Navbar/>
       <SecNavbar/>
       <div className='container'>
-      <div className="tw-mt-28 tw-mb-20">
+      <div className={`${isOpen2 ? "tw-mt-[-9rem]":"tw-mt-[8rem]" } ${isOpen ? "tw-mt-28":"tw-mt-[6rem]"} tw-mb-20`}>
         <h6 className='display-6 tw-font-semibold col-lg-12 text-center'>Shipping & Returns</h6>
       </div>
       <p className='container col-lg-12 tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252]'>
@@ -23,7 +27,7 @@ const Shipping = () => {
       Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons. Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding grass you'll air sea it, open waters subdue, hath.
       </p> 
 
-  <div className='container tw-w-[86%] tw-mt-6'>
+  <div className='container lg:tw-w-[86%] tw-mt-6 w-full'>
      <table className="table table-bordered col-sm-12">
   <thead>
     <tr >
@@ -60,7 +64,7 @@ const Shipping = () => {
   </tbody>
     </table>
   </div>
-    <div className="tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252] tw-ml-[89px] tw-space-y-7">
+    <div className="tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252] lg:tw-ml-[89px] tw-ml-0 tw-space-y-7">
     <p>
     * Second years heaven open dry. After let you're that, sea you're days over his.
     </p>
@@ -72,20 +76,20 @@ const Shipping = () => {
     </p>
     </div>
       
-      <div className="tw-ml-[89px] tw-mt-12">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-mt-12">
        <h1 className=' tw-text-xl tw-font-semibold'>International Shipping</h1>
         <p className='tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252] tw-mt-7 '>
         Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons. Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding grass you'll air sea it, open waters subdue, hath.
         </p>
       </div>
       
-      <div className="tw-ml-[89px] tw-mt-12">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-mt-12">
        <h1 className=' tw-text-xl tw-font-semibold'>About International Shipping</h1>
         <p className='tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252] tw-mt-7 '>
         Fruit heaven image us, dominion yielding heaven. There. Heaven Created shall Were. Sixth herb there fruit divide all she'd kind one moving morning, is that fruit cattle sea was. Above face life created moveth fill.        </p>
       </div>
 
-      <div className="tw-ml-[89px] tw-mt-12">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-mt-12">
        <h1 className=' tw-text-xl tw-font-semibold'>Shipping Options & Costs</h1>
         <p className='tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252] tw-mt-7 '>
         Seas moveth Our every you'll, may i. Created created, divide won't fish stars from whose given creeping male. Saying him Kind fruitful midst rule saw behold also gathering wherein cattle saying it. You'll Saying years all third Darkness multiply wherein above said you.   
@@ -93,7 +97,7 @@ const Shipping = () => {
         </p>
         </div>
 
-      <div className="tw-ml-[89px] tw-my-6 tw-cursor-pointer">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-my-6 tw-cursor-pointer">
        <h1 className=' tw-text-xl tw-underline hover:tw-no-underline'>
         <Link to="#">
         You can check it here
@@ -101,7 +105,7 @@ const Shipping = () => {
         </h1>
       </div>
 
-      <div className="tw-ml-[89px] tw-mt-11 tw-cursor-pointer">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-mt-11 tw-cursor-pointer">
        <h1 className=' tw-text-xl tw-font-semibold'>How to Order</h1>
        <p className='tw-text-[18px] tw-text-[#525252] tw-mt-5'>Appear it have yielding waters him under you'll shall stars:</p>
        <ul className='tw-mt-6 tw-ml-[27px]' style={{listStyle : "disc" ,color : "#525252"}}>
@@ -111,13 +115,13 @@ const Shipping = () => {
        </ul>
       </div>
 
-      <div className="tw-ml-[89px] tw-mt-11 tw-cursor-pointer">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-mt-11 tw-cursor-pointer">
        <h1 className=' tw-text-xl tw-font-semibold'>Returns & Exchanges</h1>
        <p className='tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252] tw-mt-7 '>
        Life years called light multiply saying green. Saw Years brought whales land. Fruitful land wherein make sixth spirit isn't the beast you're over dry. Day earth Face.</p>
       </div>
 
-      <div className="tw-ml-[89px] tw-mt-11 tw-cursor-pointer">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-mt-11 tw-cursor-pointer">
        <h1 className=' tw-text-xl tw-font-semibold'>How to Order</h1>
        <p className='tw-max-w-[60rem] tw-text-[18px] tw-text-[#525252] tw-my-7 '>
        How to Return an Item
@@ -131,7 +135,7 @@ const Shipping = () => {
        </ul>
       </div>
 
-      <div className="tw-ml-[89px] tw-mt-11 tw-cursor-pointer">
+      <div className="lg:tw-ml-[89px] tw-ml-0 tw-mt-11 tw-cursor-pointer">
        <h1 className=' tw-text-xl tw-font-semibold'>How to Exchange an Item</h1>
        <ul className='tw-mt-6 tw-ml-[27px] tw-text-[18px]' style={{listStyle : "number" ,color : "#525252"}}>
         <li>After fourth very third subdue behold second forth made hath place, the stars every bring.</li>
@@ -140,11 +144,11 @@ const Shipping = () => {
        </ul>
       </div>
       
-      <div className="tw-ml-[89px] ">
+      <div className="lg:tw-ml-[89px] tw-ml-0 ">
         <div className="row">
-          <div className="col-lg-12 tw-space-x-14 tw-py-16 tw-font-semibold">
-            <button className='tw-transition-all tw-duration-300 tw-border tw-border-[#1f1f1f] hover:tw-bg-[#1f1f1f] hover:tw-text-white tw-p-5 tw-px-32'>Have more Questions?</button>    
-            <button className='tw-transition-all tw-duration-300 tw-border tw-border-[#1f1f1f] hover:tw-bg-[#1f1f1f] hover:tw-text-white tw-p-5 tw-px-32'>Want to Contact Us?</button>    
+          <div className="col-lg-12 lg:tw-space-x-14 tw-py-16 tw-font-semibold">
+            <button className='tw-transition-all tw-duration-300 tw-border tw-border-[#1f1f1f] hover:tw-bg-[#1f1f1f] hover:tw-text-white lg:tw-p-5 lg:tw-px-24 tw-p-5 tw-px-24 '>Have more Questions?</button>    
+            <button className='tw-transition-all tw-duration-300 tw-border tw-border-[#1f1f1f] hover:tw-bg-[#1f1f1f] hover:tw-text-white lg:tw-p-5 lg:tw-px-24 tw-p-5 tw-px-[6.56rem]'>Want to Contact Us?</button>    
           </div>
           
         </div>

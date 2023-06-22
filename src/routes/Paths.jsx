@@ -33,4 +33,4 @@ const Paths = () => {
   )
 }
 
-export default Paths
+export default Paths;
