@@ -6,11 +6,15 @@ import {MdClose, MdKeyboardArrowDown} from "react-icons/md";
 import {CiMenuFries} from "react-icons/ci";
 import { Link, NavLink } from 'react-router-dom';
 import SecNavbar from './SecNavbar';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleNavbar } from '../feature/navbarSlice';
 const Navbar = () => {
     const [open,setOpen] = useState(false);
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false);
+    const isOpen = useSelector((state) => (state.navbar.isOpen));
+    const dispatch = useDispatch();
 
     const menuLinks = [
         {id: 1 ,name : "United States",link : "#"},
@@ -177,7 +181,7 @@ const Navbar = () => {
                             </ul>
             </div>
             
-            <FiMenu className='lg:tw-hidden tw-block tw-text-2xl' />
+            <FiMenu onClick={()=>dispatch(toggleNavbar())} className='lg:tw-hidden tw-block tw-text-2xl' />
         </nav>
        </div>
        

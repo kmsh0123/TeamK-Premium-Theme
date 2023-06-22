@@ -1,10 +1,22 @@
 import React from 'react'
 import {AiOutlineHeart, AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUser} from "react-icons/ai"
 import {FiMenu} from "react-icons/fi"
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { toggleNavbar, toggleNavbar2, toggleNavbar3 } from '../feature/navbarSlice'
+import Promotion from './Promotion'
 
 const SecNavbar = () => {
     const location = useLocation();
+    const isOpen = useSelector((state) =>(state.navbar.isOpen));
+    const isOpen2 = useSelector((state) =>(state.navbar.isOpen2));
+    const dispatch = useDispatch();
+    
+    const handleClick = () => {
+      dispatch(toggleNavbar2())
+      dispatch(toggleNavbar3())
+
+    }
     const menuLinks = [
         {name : "Home",link : "/"},
         {name : "Catalog",link : "/catalog"},
@@ -20,7 +32,7 @@ const SecNavbar = () => {
         {id : 4, icon : <AiOutlineShoppingCart/> , link : "#"}
     ]
   return (
-    <div className='bg-secondary tw-h-[362px] lg:tw-h-auto tw-top-[-258px] tw-relative tw-z-[2] lg:tw-top-0'>
+    <div className={`bg-white tw-h-[362px] lg:tw-h-auto ${isOpen ? "tw-top-[-258px]" : "tw-top-0"} tw-relative tw-z-[2] lg:tw-z-auto lg:tw-top-0 tw-duration-500 tw-transition-all`}>
      <nav className='navbar navbar-topbar navbar-expand-xl tw-flex tw-justify-between tw-items-center container tw-relative tw-top-3 tw-cursor-pointer'>
         <div className="container tw-flex w-100 tw-items-center tw-justify-between">
             <p className='lg:tw-text-3xl tw-text-2xl tw-font-semibold'>Shopper.</p>
@@ -48,11 +60,25 @@ const SecNavbar = () => {
                 </ul>
             </div> 
             
-            <FiMenu className='lg:tw-hidden tw-block tw-text-2xl'/>
+            <FiMenu onClick={()=>handleClick()} className='lg:tw-hidden tw-block tw-text-2xl'/>
         </div> 
                
     </nav>
-    <div className="tw-border tw-relative tw-top-[315px] lg:tw-relative lg:tw-top-[30px]"></div>    
+    {/* <div className="tw-border tw-relative tw-top-[315px] lg:tw-relative lg:tw-top-[30px]"></div>     */}
+    <div className={`py-3 tw-bg-slate-900 bg-pattern tw-h-[314px] lg:tw-h-auto mb-4 tw-relative ${isOpen2 ? "tw-top-[20px]" : "tw-top-[315px]"} lg:tw-relative lg:tw-top-[30px] tw-duration-300 tw-transition-all`}>
+  <div className="container">
+    <div className="row">
+      <div className="col-12">
+        {/* Text */}
+        <div className="text-center text-white">
+          <span className="heading-xxs letter-spacing-xl">
+            ⚡️ Happy Holiday Deals on Everything ⚡️
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
        
   )
