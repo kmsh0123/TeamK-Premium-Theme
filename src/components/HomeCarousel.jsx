@@ -19,7 +19,7 @@ function Demo() {
       ]}
       styles={{
         indicator : {
-            backgroundColor : '#bababa',
+            backgroundColor : '#898DB7',
             width : '8px',
             height : '8px',
             '&[data-active]': {
@@ -95,7 +95,7 @@ function Demo() {
         </div>
       </Carousel.Slide>
       <Carousel.Slide draggable='true'>
-        <div className=" review-card col-md-6"  >
+        <div className=" review-card"  >
                 <div className=' border p-5 '>
                     <div className=' d-flex gap-3'>
                         <img src={front3} alt="" width={'60px'} height={'60px'}/>

@@ -53,6 +53,16 @@ const Shop = () => {
   return (
     <div>
       <div className=" container">
+
+        <div className=" row">
+          <div className=" col-3">
+            <div className=" tw-relative tw-w-[400px] tw-overflow-hidden">
+              <input type="checkbox" className=" peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"/>
+              <div className=" tw-bg-blue-600 tw-h-12 tw-w-full tw-flex tw-items-center">
+              <h1 className=" tw-text-lg tw-font-semibold tw-text-white">Dashboard
+              
+              </h1>
+              <div className=" tw-absolute tw-top-0 tw-right-4 tw-text-5xl  tw-text-white tw-transition-transform tw-duration-500 tw-rotate-0 peer-checked:rotate-180"><RiArrowDropDownLine/></div>
         <div className="  row">
           <div className="  col-lg-3 col-sm-12">
             <div
@@ -652,6 +662,7 @@ const Shop = () => {
                     </div>
                   </div>
                 </div>
+
               </div>
               <div className="accordion-item">
                 <h2 className="accordion-header" id="flush-headingTwo">

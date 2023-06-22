@@ -32,9 +32,7 @@ import stradivarius from '../img/stradivarius.svg'
 import {AiOutlineEye,AiOutlineHeart} from 'react-icons/ai'
 import {LuShoppingCart} from 'react-icons/lu'
 import Demo from './HomeCarousel';
-
-
-
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
 
@@ -42,14 +40,12 @@ const HomePage = () => {
     const [hour,setHour] = useState('');
     const [minute,setMinute] = useState('');
     const [sec,setSec] = useState('');
-    const [promo,setPromo] = useState('');
+    const [change,setChange] = useState(false)
+
 
     // Set the date we're counting down to
     var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-
     // Update the count down every 1 second
-    
-
     // useEffect(()=>{
         
     //      var x = setInterval(function() {
@@ -83,9 +79,20 @@ const HomePage = () => {
 
     // },[])
 
+    function onclickhandler(e){
+        const isIt = document.querySelector('.active-border')
+        if(isIt != null){
+            isIt.classList.remove('active-border')
+            
+        }e.target.classList.add('active-border')
+
+    }
+
   return (
     <>
      {/* category */}
+     
+    {/* hero section */}
     <section>
        <div className="row gx-0">
                 <div className=' col-12 col-md-6 col-lg-4 hero-1'>
@@ -95,10 +102,12 @@ const HomePage = () => {
                         </div>
                         <div className=' mt-auto py-5 link'>
                             {/* btn ကို shop အတွက် link အုပ် */}
-                            <button className=' custom-btn btn-white bg-white rounded-0 move'>
-                                Shop Women
-                                <i className="bi bi-arrow-right ms-2 fw-bold d-inline-block text-black"></i>
-                            </button>
+                            <Link to={'/shop'} className=' a'>
+                                <button className=' custom-btn btn-white bg-white rounded-0 move'>
+                                    Shop Women
+                                    <i className="bi bi-arrow-right ms-2 fw-bold d-inline-block text-black"></i>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -108,7 +117,9 @@ const HomePage = () => {
                             <h1 className=' mb-0 fw-bolder'>Men</h1>
                         </div>
                         <div className=' mt-auto py-5 link'>
+                            <Link to={'/shop'} className=' a'>
                             <button className=' custom-btn btn-white bg-white rounded-0 move-2'>Shop Men <i className="bi bi-arrow-right d-inline-block ms-2 fw-bold"></i></button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -118,7 +129,9 @@ const HomePage = () => {
                             <h1 className=' mb-0 fw-bolder'>Kids</h1>
                         </div>
                         <div className=' mt-auto py-5 link'>
+                            <Link to={'/shop'} className=' a'>
                             <button className=' custom-btn btn-white bg-white rounded-0 move-3'>Shop Kids <i className="bi bi-arrow-right d-inline-block ms-2 fw-bold"></i></button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -181,21 +194,23 @@ const HomePage = () => {
             </div>
             <div className="row ">
                 <div className="col-12 col-md-5 col-lg-4 d-flex flex-column overflow-hidden position-relative ">
-                    <div className=' card mb-7' style={{minHeight : '400px'}}>
-                        <div className="card-bg">
+                    <div className=' best-card mb-7' style={{minHeight : '400px'}}>
+                        <div className="best-card-bg">
                             <div className=' pro1-bg pro-1'></div>
                         </div>
                         <div className=" flex my-auto px-5 text-white link">
                             <h4 className=' mb-0'>Printed men's Shirt</h4>
+                            <Link to={'/shop'}>
                             <button className=' px-3 py-2 border-0 bg-transparent move text-white'>Shop Now
                             <i className="bi bi-arrow-right ms-2 d-inline-block "></i>
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className=' col-12 col-md-7 col-lg-8 d-flex flex-column'>
-                    <div className=' card mb-7' style={{minHeight : '400px'}}>
-                        <div className="card-bg">
+                    <div className=' best-card mb-7' style={{minHeight : '400px'}}>
+                        <div className="best-card-bg">
                             <div className=' pro1-bg pro-2'></div>
                         </div>
                         <div className=" flex my-auto px-5 link" >
@@ -204,35 +219,41 @@ const HomePage = () => {
                                 <span className='text-white fw-semibold fs-3'>30%</span>
                             </div>
                             <h4 className=' mb-0'>Printed men's Shirt</h4>
+                            <Link to={'/shop'}>
                             <button className=' px-3 py-2 border-0 bg-transparent move'>Shop Now
                             <i className="bi bi-arrow-right ms-2 d-inline-block "></i>
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className=' col-12 col-md-7 col-lg-8 d-flex flex-column'>
-                    <div className=' card mb-7' style={{minHeight : '400px'}}>
-                        <div className="card-bg">
+                    <div className=' best-card mb-7' style={{minHeight : '400px'}}>
+                        <div className="best-card-bg">
                             <div className=' pro1-bg pro-3'></div>
                         </div>
                         <div className=" flex my-auto px-5 link">
                             <h4 className=' mb-0'>Basic Women's Dresses</h4>
+                            <Link to={'/shop'}>
                             <button className=' px-3 py-2 border-0 bg-transparent move'>Shop Now
                             <i className="bi bi-arrow-right ms-2 d-inline-block "></i>
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className="col-12 col-md-5 col-lg-4 d-flex flex-column overflow-hidden position-relative ">
-                    <div className=' card mb-7' style={{minHeight : '400px'}}>
-                        <div className="card-bg">
+                    <div className=' best-card mb-7' style={{minHeight : '400px'}}>
+                        <div className="best-card-bg">
                             <div className=' pro1-bg pro-4'></div>
                         </div>
                         <div className=" flex my-auto px-5 text-white link">
                             <h4 className=' mb-0'>Printed men's Shirt</h4>
+                            <Link to={'/shop'}>
                             <button className=' px-3 py-2 border-0 bg-transparent move text-white'>Shop Now
                             <i className="bi bi-arrow-right ms-2 d-inline-block "></i>
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -253,18 +274,77 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="tab-content" id="myTabContent">
+                    {/* modal */}
+                    <div className="modal fade my-modal" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog modal-xl modal-dialog-centered">
+                            <div className="modal-content d-flex flex-column flex-md-row justify-content-center position-relative">
+                                <div className=' d-flex flex-column '>
+                                    <img src={front3} alt="" className=' w-100 h-100 my-modal-img'  />
+                                    <div className=' text-center bg-danger py-3'>
+                                        <p className=' mb-0 text-white fw-semibold'>More Product Info <i className=' bi bi-exclamation-circle'></i></p>
+                                    </div>
+                                </div>
+                                <div className=' px-3 py-5 px-md-5'>
+                                    <button type="button" className=" border-0 fs-4 fw bg-transparent d-block ms-auto modal-close" data-bs-dismiss="modal"><i className=' bi bi-x-lg fw-bolder text-black-50'></i></button>
+                                    <h1>Shose</h1>
+                                    <p className=' h3 mb-4'>$85.00 <small className=' text-xs text-black-50 fw-light'>(In Stock)</small></p>
+                                    <p className=' '>Color: <span> White</span></p>
+                                    <div className=' d-flex gap-1 my-4 '>
+                                        <img src={front3} alt="" style={{width : '100px'}}/>
+                                        <img src={front3} alt="" style={{width : '100px'}}/>
+                                    </div>
+                                    <div className=' py-4'>
+                                    <p className=' text-black-50 '>Size: <span className=' text-black fw-medium'>7.5 US</span></p>
+                                    <div className=' d-flex gap-2 flex-wrap'>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>6</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold text-decoration-line-through border`} style={{width: '50px',height: '50px'}} onClick={()=>setSelect10(!select10)}>6.5</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>7</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>7.5</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>8</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>8.5</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>9</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>10</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>10.5</button>
+                                        <button className={`bg-transparent p-2 d-block text-black-50 fw-semibold border`} style={{width: '50px',height: '50px'}} onClick={(e)=> onclickhandler(e)}>11</button>
+             
+                                    </div>
+                                    </div>
+                                    <div className=' row gap-3 mt-3'>
+                                        <div className=' col-12 col-md-2'>
+                                            <select name="quantity" id="" className=' px-3 px-md-2 py-md-3 form-select rounded-0'>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                            </select>
+                                        </div>
+                                        <div className=' col-12 col-md-5'>
+                                            <button className=' bg-black w-100 d-block px-2 py-3 px-md-5 py-md-3 text-white gap-2 border-0'>
+                                                <small className=' fw-semibold'>Add To Cart</small> <i className=' bi bi-cart text-white'></i>
+                                            </button>
+                                        </div>
+                                        <div className=' col-12 col-md-4'>
+                                            <button className=' border border-black w-100 d-block bg-transparent px-4 py-3 '>Whishlist <i className=' bi bi-heart text-black'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
                         <div className="row">
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                     <div className=' card-badge sh-badge bg-white text-uppercase px-2'>New</div>
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={back1} className=' card-img-top img-back ' alt="" />
                                             <img src={front1} className=' card-img-top img-front' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        < AiOutlineEye className=' text-black-50' />
+                                                    </button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -284,14 +364,14 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={back2} className=' card-img-top img-back ' alt="" />
                                             <img src={front2} className=' card-img-top img-front' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">< AiOutlineEye className=' text-black-50' /></button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -311,15 +391,15 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                 <div className=' card-badge sh-badge bg-black text-white text-uppercase px-2'>New</div>
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={back3} className=' card-img-top img-back ' alt="" />
                                             <img src={front3} className=' card-img-top img-front' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">< AiOutlineEye className=' text-black-50' /></button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -339,15 +419,15 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                     <div className=' card-badge sh-badge bg-white text-uppercase px-2'>New</div>
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={back4} className=' card-img-top img-back ' alt="" />
                                             <img src={front4} className=' card-img-top img-front' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">< AiOutlineEye className=' text-black-50' /></button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -367,15 +447,15 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                     <div className=' card-badge sh-badge bg-white text-uppercase px-2'>New</div>
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={back5} className=' card-img-top img-back ' alt="" />
                                             <img src={front5} className=' card-img-top img-front' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">< AiOutlineEye className=' text-black-50' /></button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -395,14 +475,14 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                     <div className=' card-badge sh-badge bg-black text-white text-uppercase px-2'>New</div>
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={pro5} className=' card-img-top  ' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">< AiOutlineEye className=' text-black-50' /></button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -422,13 +502,13 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={pro6} className=' card-img-top  ' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">< AiOutlineEye className=' text-black-50' /></button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -448,13 +528,13 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <div className="col-6 col-md-4 col-lg-3">
-                                <div className="card mb-7" >
+                                <div className="sh-card mb-7" >
                                     <div className=' sh-card-img position-relative'>
                                         <a href="#" className=' sh-card-img-hover d-block'>
                                             <img src={pro7} className=' card-img-top  ' alt="" />
-                                            <div className=' sh-card-actions '>
+                                            <div className=' sh-card-actions gap-2'>
                                                 <span className=' sh-card-action'>
-                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary'>< AiOutlineEye className=' text-black-50' /></button>
+                                                    <button className=' btn-circle sh-btn-xs sh-btn-white-primary' type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">< AiOutlineEye className=' text-black-50' /></button>
                                                 </span>
                                                 <span className=' sh-card-action'>
                                                     <button className=' btn-circle sh-btn-xs sh-btn-white-primary'><LuShoppingCart className=' text-black-50'/></button>
@@ -522,7 +602,9 @@ const HomePage = () => {
                         </div>
                         
                         <div>
+                            <Link to={'/shop'}>
                             <button className=' px-5 py-3 count-btn border-0 text-white'>Shop Now <i className=' bi bi-arrow-right ms-2 count-arrow d-inline-block '></i></button>
+                            </Link>
                         </div>
                     </div>
                 </div>

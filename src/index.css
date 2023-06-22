@@ -1,3 +1,8 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap");
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
@@ -7,7 +12,7 @@
   --bs-success: #28bb74;
   --bs-info: #3b86ff;
   --bs-warning: #ff9736;
-  --bs-danger: #ff6f61;
+  --bs-danger: #E66457;
   --bs-gray: #3e3e3e;
   --bs-gray-dark: #2b2b2b;
   --bs-gray-100: #e5e5e5;
@@ -116,10 +121,10 @@
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
-  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-color-translucent: none;
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
-  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-lg: none;
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-xxl: 2rem;
   --bs-border-radius-2xl: var(--bs-border-radius-xxl);
@@ -16151,6 +16156,10 @@ textarea.form-control-lg {
 
 .pe-auto {
   pointer-events: auto !important;
+
+.hover-bg:hover .link .a .move > .bi-arrow-right {
+  transform: translateX(0.25rem);
+
 }
 
 .rounded {
@@ -16159,6 +16168,10 @@ textarea.form-control-lg {
 
 .rounded-0 {
   border-radius: 0 !important;
+
+.hover-bg-2:hover > .link .a .move-2 > .bi-arrow-right {
+  transform: translateX(0.25rem);
+
 }
 
 .rounded-1 {
@@ -16167,6 +16180,10 @@ textarea.form-control-lg {
 
 .rounded-2 {
   border-radius: var(--bs-border-radius) !important;
+
+.hover-bg-3:hover .link .a .move-3 > .bi-arrow-right {
+  transform: translateX(0.25rem);
+
 }
 
 .rounded-3 {
@@ -16175,11 +16192,27 @@ textarea.form-control-lg {
 
 .rounded-4 {
   border-radius: var(--bs-border-radius-xl) !important;
+
+.best-card {
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #fff;
+  border: 0 solid hsla(0deg, 0%, 7%, 0.125);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+}
+
+.best-card:hover .link a .move > .bi-arrow-right {
+  transform: translateX(0.25rem);
+
 }
 
 .rounded-5 {
   border-radius: var(--bs-border-radius-xxl) !important;
 }
+
 
 .rounded-circle {
   border-radius: 50% !important;
@@ -16222,6 +16255,30 @@ textarea.form-control-lg {
 .rounded-top-5 {
   border-top-left-radius: var(--bs-border-radius-xxl) !important;
   border-top-right-radius: var(--bs-border-radius-xxl) !important;
+
+.sh-card {
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #fff;
+  border: 0 solid hsla(0deg, 0%, 7%, 0.125);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+}
+
+.best-card-bg {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.best-card-bg ~ * {
+  z-index: 1;
+
 }
 
 .rounded-top-circle {
@@ -16319,9 +16376,21 @@ textarea.form-control-lg {
   border-bottom-left-radius: 50% !important;
 }
 
+
 .rounded-bottom-pill {
   border-bottom-right-radius: var(--bs-border-radius-pill) !important;
   border-bottom-left-radius: var(--bs-border-radius-pill) !important;
+
+.sh-card-action {
+  left: 0;
+  opacity: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  transform: translateY(0.5rem);
+  transition: all 0.1s ease-in-out;
+  transition-property: transform, opacity;
+
 }
 
 .rounded-start {
@@ -19196,8 +19265,93 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+
+
+.my-modal {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.my-modal-img {
+  object-position: 50%;
+  object-fit: cover;
+}
+
+.active-border {
+  border-color: black !important;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
+
+/*# sourceMappingURL=index.css.map */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*# sourceMappingURL=index.css.map */
+
+.dropdown {
+    position: relative;
+    transition: all .2s ease-in-out;
+    transition-property: visibility,transform,opacity;
+}
+  .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: #f9f9f9;
+    min-width : 60px;
+    margin-top : 2px;
+    box-shadow : 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  .dropdown:hover .dropdown-menu{
+    display: block;
+  }
+  
+  .dropdown-menu ul {
+    list-style-type: none;
+    padding : 0;
+    margin : 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 5px;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #ddd;
+    transition: opacity 2000ms ease-in-out;
+
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+  
+    .dropdown-toggle {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      display: block;
+      box-shadow: none;
+    }
+
+  }
+
+  .table-p{
+    padding: 1.5rem !important;
+  }
+   
+  .active{
+    color : #ff6f61
+  }
+  }
+
