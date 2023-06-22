@@ -1,3 +1,7 @@
+import React from "react";
+import "./App.scss";
+import { Route, Routes } from "react-router-dom";
+import Paths from "./routes/Paths";
 
 import React from "react";
 import "./App.scss";
@@ -26,6 +30,9 @@ import "./index.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const App = () => {
+
+
+
   return (
 
     <div className="">      
@@ -40,6 +47,12 @@ const App = () => {
     <Paths/>
     </div>
     <>
+      <Paths/>
+    </>
+  );
+};
+
+export default App;
 
     {/* <Navbar/> */}
     
