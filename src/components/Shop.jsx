@@ -6,9 +6,50 @@ import { FiEye, FiShoppingCart } from "react-icons/fi";
 import { BiHeart } from "react-icons/bi";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { BsFillCaretRightFill, BsCaretLeftFill } from "react-icons/bs";
+import {
+  Accordion,
+  Anchor,
+  Box,
+  Breadcrumbs,
+  Button,
+  CheckIcon,
+  CloseButton,
+  Collapse,
+  ColorInput,
+  ColorSwatch,
+  Group,
+  Text,
+  rem,
+  useMantineTheme,
+} from "@mantine/core";
 // import { RiArrowDropDownLine } from "react-icons/ri"
+// import { useDisclosure } from "@mantine/hooks";
+import { useState } from "react";
 
 const Shop = () => {
+  // const [opened, { toggle }] = useDisclosure(false);
+  const theme = useMantineTheme();
+  const [checkedr, setCheckedr] = useState(true);
+  const [checkedbr, setCheckedbr] = useState(true);
+  const [checkedb, setCheckedb] = useState(true);
+  const [checkedg, setCheckedg] = useState(true);
+  const [checkedc, setCheckedc] = useState(true);
+
+
+  const [checkedp, setCheckedp] = useState(true);
+
+  const [checkedd, setCheckedd] = useState(true);
+
+  const [checkedw, setCheckedw] = useState(true);
+
+  const items = [
+    { title: 'Home', href: '#' },
+    { title: `Womens' Clothing`, href: '#' },
+  ].map((item, index) => (
+    <Anchor href={item.href} key={index}>
+      {item.title}
+    </Anchor>
+  ));
   return (
     <div>
       <div className=" container">
@@ -25,7 +66,7 @@ const Shop = () => {
         <div className="  row">
           <div className="  col-lg-3 col-sm-12">
             <div
-              className="accordion accordion-flush"
+              className=" accordion accordion-flush"
               id="accordionFlushExample"
             >
               <div className="accordion-item">
@@ -55,7 +96,7 @@ const Shop = () => {
                       <ul className=" list-group-flush mb-0" id="productsNav">
                         <li className=" list-group-item">
                           <a
-                            className=" tw-text-xl tw-text-gray-700 tw-font-normal"
+                            className=" tw-text-lg tw-text-gray-600 tw-font-normal"
                             href="#"
                           >
                             All Products
@@ -63,7 +104,7 @@ const Shop = () => {
                         </li>
                         <li className=" list-group-item tw-mt-4">
                           <a
-                            className=" tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
+                            className=" tw-text-lg tw-text-gray-600 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#blousesCollapse"
                             aria-expanded="false"
@@ -84,7 +125,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesOne"
                                 >
                                   Women Tops, Tees &amp; Blouses
@@ -95,10 +136,10 @@ const Shop = () => {
                                   className="form-check-input"
                                   id="blousesTwo"
                                   type="checkbox"
-                                  checked
                                 />
+
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesTwo"
                                 >
                                   Petite
@@ -111,7 +152,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesThree"
                                 >
                                   Petite-Size Blouses &amp; Button-Down Shirts
@@ -124,7 +165,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="blousesFour"
                                 >
                                   Women Plus Tops &amp; Tees
@@ -135,7 +176,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#coatsCollapse"
                             aria-expanded="false"
@@ -156,7 +197,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="coatsOne"
                                 >
                                   Coats, Jackets &amp; Vests
@@ -169,7 +210,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="coatsTwo"
                                 >
                                   Down Jackets &amp; Parkas
@@ -182,7 +223,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="coatsThree"
                                 >
                                   Wool &amp; Pea Coats Plus-Size
@@ -193,7 +234,7 @@ const Shop = () => {
                         </li>
                         <li className=" list-group-item tw-mt-4">
                           <a
-                            className=" tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
+                            className=" tw-text-lg tw-text-gray-600 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#dressesCollapse"
                             aria-expanded="false"
@@ -214,7 +255,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesOne"
                                 >
                                   A-line Dresses
@@ -227,7 +268,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesTwo"
                                 >
                                   Shift Dresses
@@ -240,7 +281,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesThree"
                                 >
                                   Wrap Dresses
@@ -253,7 +294,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="dressesFour"
                                 >
                                   Maxi Dresses
@@ -264,7 +305,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="tw-text-xl tw-text-gray-700 tw-font-normal"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
                             data-bs-toggle="collapse"
                             href="#hoodiesCollapse"
                             aria-expanded="true"
@@ -285,7 +326,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesOne"
                                 >
                                   Activewear
@@ -298,7 +339,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesTwo"
                                 >
                                   Fashion Hoodies &amp; Sweatshirts
@@ -311,7 +352,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesThree"
                                 >
                                   Big &amp; Tall Sweatshirts
@@ -324,7 +365,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="hoodiesFour"
                                 >
                                   Big &amp; Tall Fashion Hoodies
@@ -335,7 +376,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
+                            className="list-styled-link tw-text-lg tw-text-gray-600 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#denimCollapse"
                             aria-expanded="false"
@@ -356,7 +397,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimOne"
                                 >
                                   Women Shorts
@@ -369,7 +410,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimTwo"
                                 >
                                   Juniors' Shorts
@@ -382,7 +423,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimThree"
                                 >
                                   Petite
@@ -395,7 +436,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="denimFour"
                                 >
                                   Women Plus Shorts
@@ -406,7 +447,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
+                            className="list-styled-link tw-text-lg tw-text-gray-600 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#jeansCollapse"
                             aria-expanded="false"
@@ -427,7 +468,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansOne"
                                 >
                                   Men Jeans
@@ -440,7 +481,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansTwo"
                                 >
                                   Men Big &amp; Tall Jeans
@@ -453,7 +494,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansThree"
                                 >
                                   Surf, Skate &amp; Street Clothing
@@ -466,7 +507,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jeansFour"
                                 >
                                   Men Big &amp; Tall Pants
@@ -477,7 +518,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
+                            className="list-styled-link tw-text-lg tw-text-gray-600 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#jumpersCollapse"
                             aria-expanded="false"
@@ -498,7 +539,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersOne"
                                 >
                                   Sweaters Plus-Size
@@ -511,7 +552,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersTwo"
                                 >
                                   Plus Sweaters
@@ -524,7 +565,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersThree"
                                 >
                                   Petite Cardigans
@@ -537,7 +578,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="jumpersFour"
                                 >
                                   Tops, Tees &amp; Blouses
@@ -548,7 +589,7 @@ const Shop = () => {
                         </li>
                         <li className="list-group-item tw-mt-4">
                           <a
-                            className="list-styled-link tw-text-xl tw-text-gray-700 tw-font-normal collapsed"
+                            className="list-styled-link tw-text-lg tw-text-gray-600 tw-font-normal collapsed"
                             data-bs-toggle="collapse"
                             href="#legginsCollapse"
                             aria-expanded="false"
@@ -569,7 +610,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsOne"
                                 >
                                   Novelty Leggings
@@ -582,7 +623,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsTwo"
                                 >
                                   Novelty Pants &amp; Capris
@@ -595,7 +636,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsThree"
                                 >
                                   Women Yoga Leggings
@@ -608,7 +649,7 @@ const Shop = () => {
                                   type="checkbox"
                                 />
                                 <label
-                                  className="form-check-label tw-text-xl tw-text-gray-500 tw-font-normal tw-capitalize"
+                                  className="form-check-label tw-text-lg tw-text-gray-500 tw-font-normal tw-capitalize"
                                   htmlFor="legginsFour"
                                 >
                                   Workout &amp; Training Leggings
@@ -673,7 +714,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="seasonOne"
                                     >
                                       Summer
@@ -686,7 +727,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="seasonTwo"
                                     >
                                       Winter
@@ -699,7 +740,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="seasonThree"
                                     >
                                       Spring &amp; Autumn
@@ -735,212 +776,185 @@ const Shop = () => {
                     Size
                   </button>
                 </h2>
-                {/* <div
-                  className="collapse show"
-                  id="sizeCollapse"
-                  data-simplebar-collapse="#sizeGroup"
-                  style=""
+                <div
+                  id="flush-collapseThree"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
                 >
-                  <div
-                    className="form-group form-group-overlow mb-6"
-                    id="sizeGroup"
-                    data-simplebar="init"
-                  >
-                    <div className="simplebar-wrapper" style="margin: 0px;">
-                      <div className="simplebar-height-auto-observer-wrapper">
-                        <div className="simplebar-height-auto-observer"></div>
-                      </div>
-                      <div className="simplebar-mask">
-                        <div
-                          className="simplebar-offset"
-                          style="right: 0px; bottom: 0px;"
-                        >
-                          <div
-                            className="simplebar-content-wrapper"
-                            tabIndex="0"
-                            role="region"
-                            aria-label="scrollable content"
-                            style="height: auto; overflow: hidden;"
+                  <div className="accordion-body">
+                    <div
+                      className="collapse show"
+                      id="seasonCollapse"
+                      data-simplebar-collapse="#seasonGroup"
+                    >
+                      <div className=" tw-flex tw-flex-col ">
+                        <div className=" tw-flex tw-justify-around">
+                        <div className=" tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonOne"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
                           >
-                            <div
-                              className="simplebar-content"
-                              style="padding: 0px;"
-                            >
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeOne"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeOne"
-                                >
-                                  3XS
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeTwo"
-                                  type="checkbox"
-                                  disabled=""
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeTwo"
-                                >
-                                  2XS
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeThree"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeThree"
-                                >
-                                  XS
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeFour"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeFour"
-                                >
-                                  S
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeFive"
-                                  type="checkbox"
-                                  checked=""
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeFive"
-                                >
-                                  M
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeSix"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeSix"
-                                >
-                                  L
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeSeven"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeSeven"
-                                >
-                                  XL
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeEight"
-                                  type="checkbox"
-                                  disabled=""
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeEight"
-                                >
-                                  2XL
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeNine"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeNine"
-                                >
-                                  3XL
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeTen"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeTen"
-                                >
-                                  4XL
-                                </label>
-                              </div>
-                              <div className="form-check form-check-inline form-check-size mb-2">
-                                <input
-                                  className="form-check-input"
-                                  id="sizeEleven"
-                                  type="checkbox"
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor="sizeEleven"
-                                >
-                                  One Size
-                                </label>
-                              </div>
-                            </div>
-                          </div>
+                            3XS
+                          </Button>
+                        </div>
+                        <div className=" tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            2XS
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            XS
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            S
+                          </Button>
+                        </div>
+                        </div>
+                        <div className="tw-flex tw-justify-around">
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            M
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            M
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            L
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            XL
+                          </Button>
+                        </div>
+                        </div>
+                        <div className=" tw-flex tw-justify-around">
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            2XL
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            3XL
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            4XL
+                          </Button>
+                        </div>
+                        <div className="tw-me-3 tw-mb-3">
+                          {/* <input
+                                      className="form-check-input"
+                                      id="seasonTwo"
+                                      type="checkbox"
+                                    /> */}
+                          <Button
+                            variant="outline"
+                            className="tw-text-lg tw-text-gray-600 tw-font-normal"
+                          >
+                            One Size
+                          </Button>
+                        </div>
                         </div>
                       </div>
-                      <div
-                        className="simplebar-placeholder"
-                        style="width: auto; height: 99px;"
-                      ></div>
-                    </div>
-                    <div
-                      className="simplebar-track simplebar-horizontal"
-                      style="visibility: hidden;"
-                    >
-                      <div
-                        className="simplebar-scrollbar"
-                        style="width: 0px; display: none;"
-                      ></div>
-                    </div>
-                    <div
-                      className="simplebar-track simplebar-vertical"
-                      style="visibility: hidden;"
-                    >
-                      <div
-                        className="simplebar-scrollbar"
-                        style="height: 0px; display: none;"
-                      ></div>
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
 
               <div className="accordion-item">
@@ -986,107 +1000,146 @@ const Shop = () => {
                                 aria-label="scrollable content"
                               >
                                 <div className="simplebar-content">
-                                  <div className="form-check form-check-color mb-3">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorOne"
-                                      type="checkbox"
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.dark[8]}
+                                      onClick={() => setCheckedd((c) => !c)}
+                                      sx={{ color: "#fff", cursor: "pointer" }}
+                                    >
+                                      {checkedd && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
                                       htmlFor="colorOne"
                                     >
                                       Black
                                     </label>
                                   </div>
-                                  <div className="form-check form-check-color mb-3">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorTwo"
-                                      type="checkbox"
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.gray[0]}
+                                      onClick={() => setCheckedw((c) => !c)}
+                                      sx={{ color: "#000", cursor: "pointer" }}
+                                    >
+                                      {checkedw && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
-                                      htmlFor="colorTwo"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
+                                      htmlFor="colorOne"
                                     >
                                       White
                                     </label>
                                   </div>
-                                  <div className="form-check form-check-color mb-3">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorThree"
-                                      type="checkbox"
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.indigo[7]}
+                                      onClick={() => setCheckedb((c) => !c)}
+                                      sx={{ color: "#fff", cursor: "pointer" }}
+                                    >
+                                      {checkedb && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
-                                      htmlFor="colorThree"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
+                                      htmlFor="colorOne"
                                     >
                                       Blue
                                     </label>
                                   </div>
-                                  <div className="form-check form-check-color mb-3">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorFour"
-                                      type="checkbox"
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.red[7]}
+                                      onClick={() => setCheckedr((c) => !c)}
+                                      sx={{ color: "#fff", cursor: "pointer" }}
+                                    >
+                                      {checkedr && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
-                                      htmlFor="colorFour"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
+                                      htmlFor="colorOne"
                                     >
                                       Red
                                     </label>
                                   </div>
-                                  <div className="form-check form-check-color mb-3">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorFive"
-                                      type="checkbox"
-                                      disabled=""
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.pink[9]}
+                                      onClick={() => setCheckedbr((c) => !c)}
+                                      sx={{ color: "#fff", cursor: "pointer" }}
+                                    >
+                                      {checkedbr && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
-                                      htmlFor="colorFive"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
+                                      htmlFor="colorOne"
                                     >
                                       Brown
                                     </label>
                                   </div>
-                                  <div className="form-check form-check-color mb-3">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorSix"
-                                      type="checkbox"
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.gray[5]}
+                                      onClick={() => setCheckedg((c) => !c)}
+                                      sx={{ color: "#fff", cursor: "pointer" }}
+                                    >
+                                      {checkedg && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
-                                      htmlFor="colorSix"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
+                                      htmlFor="colorOne"
                                     >
                                       Gray
                                     </label>
                                   </div>
-                                  <div className="form-check form-check-color mb-3">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorSeven"
-                                      type="checkbox"
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.cyan[6]}
+                                      onClick={() => setCheckedc((c) => !c)}
+                                      sx={{ color: "#fff", cursor: "pointer" }}
+                                    >
+                                      {checkedc && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
-                                      htmlFor="colorSeven"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
+                                      htmlFor="colorOne"
                                     >
                                       Cyan
                                     </label>
                                   </div>
-                                  <div className="form-check form-check-color">
-                                    <input
-                                      className="form-check-input"
-                                      id="colorEight"
-                                      type="checkbox"
-                                    />
+                                  <div className=" tw-flex tw-item-center tw-mb-3">
+                                    <ColorSwatch
+                                      className=" tw-me-3"
+                                      component="button"
+                                      color={theme.colors.pink[5]}
+                                      onClick={() => setCheckedp((c) => !c)}
+                                      sx={{ color: "#fff", cursor: "pointer" }}
+                                    >
+                                      {checkedp && <CheckIcon width={rem(10)} />}
+                                    </ColorSwatch>
+
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal text-body"
-                                      htmlFor="colorEight"
+                                      className=" tw-text-lg tw-text-gray-600 tw-font-normal text-body"
+                                      htmlFor="colorOne"
                                     >
                                       Pink
                                     </label>
@@ -1155,7 +1208,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandOne"
                                     >
                                       Dsquared2
@@ -1169,7 +1222,7 @@ const Shop = () => {
                                       disabled=""
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandTwo"
                                     >
                                       Alexander McQueen
@@ -1182,7 +1235,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandThree"
                                     >
                                       Balenciaga
@@ -1195,7 +1248,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandFour"
                                     >
                                       Adidas
@@ -1208,7 +1261,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandFive"
                                     >
                                       Balmain
@@ -1221,7 +1274,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandSix"
                                     >
                                       Burberry
@@ -1234,7 +1287,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandSeven"
                                     >
                                       Chloé
@@ -1247,7 +1300,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandEight"
                                     >
                                       Kenzo
@@ -1260,7 +1313,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label name tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label name tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="brandNine"
                                     >
                                       Givenchy
@@ -1333,7 +1386,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="priceOne"
                                     >
                                       $10.00 - $49.00
@@ -1346,7 +1399,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="priceTwo"
                                     >
                                       $50.00 - $99.00
@@ -1359,7 +1412,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-label tw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="priceThree"
                                     >
                                       $100.00 - $199.00
@@ -1372,7 +1425,7 @@ const Shop = () => {
                                       type="checkbox"
                                     />
                                     <label
-                                      className="form-check-labeltw-text-xl tw-text-gray-700 tw-font-normal"
+                                      className="form-check-label tw-mb-3 tw-text-lg tw-text-gray-600 tw-font-normal"
                                       htmlFor="priceFour"
                                     >
                                       $200.00 and Up
@@ -1414,11 +1467,13 @@ const Shop = () => {
                 </div>
               </div>
             </div>
+
+            <div className=""></div>
           </div>
 
           <div className=" col-lg-9 col-sm-12">
             <div className=" d-flex flex-column">
-              <div className="  ">
+              <div className=" col-12">
                 <div id="carouselExampleCaptions" className="carousel slide ">
                   <div className="carousel-indicators">
                     <button
@@ -1554,37 +1609,29 @@ const Shop = () => {
                 </div>
               </div>
 
-              <div className=" tw-mt-16 tw-mb-6 d-flex justify-content-between align-item center">
+              <div className=" col-12 tw-mt-16 tw-mb-6 tw-flex tw-justify-between tw-item-center">
                 <div className="">
                   <h1 className=" tw-text-3xl tw-font-medium tw-mb-3">
                     Womens' Clothing
                   </h1>
-                  <div className=" ">
+                  <div className=" tw-text-gray-500">
                     {/* <p className=" tw-text-gray-600 tw-text-lg">Home</p>
                     <span className=" tw-text-gray-600 tw-text-lg">Womens' Clothing</span> */}
 
-                    <nav className="" aria-label="breadcrumb">
-                      <ol className="breadcrumb">
-                        <li className="breadcrumb-item tw-text-gray-500 tw-text-sm">
-                          <a href="#">Home</a>
-                        </li>
-                        <li
-                          className="breadcrumb-item active tw-text-gray-500 tw-text-sm"
-                          aria-current="page"
-                        >
-                          Womens' Clothing
-                        </li>
-                      </ol>
-                    </nav>
+                
+                      
+                      
+      <Breadcrumbs separator=">" mt="xs" className="tw-text-gray-500 tw-text-sm">{items}</Breadcrumbs>
+                 
                   </div>
                 </div>
                 <div className="">
-                  <a className=" btn btn-outline-dark btn-lg">Most Popular</a>
+                  <a className=" tw-p-2 tw-text-lg tw-font-medium tw-transition tw-delay-75 tw-w-50 tw-outline tw-outline-gray-400 hover:tw-bg-gray-900 hover:tw-text-yellow-50">Most Popular</a>
                 </div>
               </div>
               <div className="row tw-mb-12">
                 <div className=" tw-flex tw-flex-wrap">
-                  <div className=" d-flex justify-content-center align-items-center tw-bg-gray-100 tw-me-4">
+                  <div className=" d-flex tw-mb-3 justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
                     <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
                       Shift dresses
                     </h2>
@@ -1592,8 +1639,8 @@ const Shop = () => {
                       <BsXLg className="" />
                     </span>
                   </div>
-
-                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    
+                  <div className=" d-flex tw-mb-3 justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
                     <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
                       Summer
                     </h2>
@@ -1601,8 +1648,10 @@ const Shop = () => {
                       <BsXLg className="" />
                     </span>
                   </div>
-                  <div className=" d-flex justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
-                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">M</h2>
+                  <div className=" d-flex tw-mb-3 justify-content-center align-items-center tw-p-4 tw-bg-gray-100 tw-me-4">
+                    <h2 className=" tw-me-4 tw-text-base tw-text-gray-500">
+                      M
+                    </h2>
                     <span className="">
                       <BsXLg className="" />
                     </span>
@@ -1675,7 +1724,7 @@ const Shop = () => {
                       <div className="card-actions ">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -1686,7 +1735,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1696,7 +1745,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1720,7 +1769,9 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1745,10 +1796,10 @@ const Shop = () => {
                         />
                       </a>
 
-                      <div className="card-actions">
+                      <div className="card-actions ">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -1759,7 +1810,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1769,7 +1820,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-xs btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1793,7 +1844,9 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1818,10 +1871,10 @@ const Shop = () => {
                         />
                       </a>
 
-                      <div className="card-actions">
+                      <div className="card-actions ">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -1832,7 +1885,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1842,7 +1895,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-xs btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1865,7 +1918,9 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1888,7 +1943,7 @@ const Shop = () => {
                       <div className="card-actions">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -1899,7 +1954,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1909,7 +1964,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-xs btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1933,7 +1988,9 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1956,7 +2013,7 @@ const Shop = () => {
                       <div className="card-actions">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -1967,7 +2024,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -1977,7 +2034,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-xs btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -2001,7 +2058,9 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2029,7 +2088,7 @@ const Shop = () => {
                       <div className="card-actions">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -2040,7 +2099,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -2050,7 +2109,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-xs btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -2074,7 +2133,9 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2102,7 +2163,7 @@ const Shop = () => {
                       <div className="card-actions">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -2113,7 +2174,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -2123,7 +2184,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-xs btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -2147,7 +2208,9 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2165,12 +2228,13 @@ const Shop = () => {
                           src="https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-12.jpg"
                           alt="..."
                         />
+                        
                       </a>
 
                       <div className="card-actions">
                         <span className="card-action eye">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-bs-toggle="modal"
                             data-bs-target="#modalProduct"
                           >
@@ -2181,7 +2245,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action shop">
                           <a
-                            className="btn btn-lg btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -2191,7 +2255,7 @@ const Shop = () => {
                         </span>
                         <span className="card-action heart">
                           <a
-                            className="btn btn-xs btn-circle btn-white"
+                            className="btn cus-btn-circle cus-btn-white"
                             data-toggle="button"
                           >
                             <i className="">
@@ -2215,17 +2279,22 @@ const Shop = () => {
                         </a>
                       </div>
 
-                      <div className=" tw-font-medium tw-text-gray-500">$129.00</div>
+                      <div className=" tw-font-medium tw-text-gray-500">
+                        $129.00
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                
               </div>
+
+                   {/* https://yevgenysim-turkey.github.io/shopper/assets/img/products/product-12.jpg */}
+
             </div>
           </div>
-
-          
         </div>
-        <div className=" d-flex justify-content-end tw-my-8">
+        <div className=" tw-flex lg:tw-justify-end tw-justify-center tw-my-8">
           <nav aria-label="...">
             <ul className="pagination">
               <li className="page-item disabled">
