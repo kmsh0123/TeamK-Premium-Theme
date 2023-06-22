@@ -41,7 +41,7 @@ function Demo() {
       slidesToScroll={1}
     >
       <Carousel.Slide draggable='true'>
-        <div className=" review-card col-md-6"  >
+        <div className=" review-card"  >
                 <div className=' border p-5 '>
                     <div className=' d-flex gap-3'>
                         <img src={tshirt} alt="" width={'60px'} height={'60px'}/>
